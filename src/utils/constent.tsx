@@ -1,6 +1,6 @@
-export const enCodeText = encodeURIComponent(`Hi Anantharaa Team,
+export const enCodeText = encodeURIComponent(`Hi Trikone Team,
 
-I'm interested in booking a stay at Anantharaa.
+I'm interested in booking a stay at Trikone.
 
 Please share the best available options and rates.
 

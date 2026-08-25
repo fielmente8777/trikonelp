@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiMapPin, FiPhone, FiMail, FiUser } from "react-icons/fi";
-import { FaCalendarAlt } from "react-icons/fa";
 
 import { Container } from "../sectionComponants";
 import { footerData } from "./footerdata";

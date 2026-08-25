@@ -1,5 +1,6 @@
 "use client";
-import { enCodeText } from "@/utils/constent";
+
+import { enCodeText } from "@/src/utils/constent";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaWhatsapp } from "react-icons/fa";

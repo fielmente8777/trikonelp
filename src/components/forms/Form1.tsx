@@ -14,8 +14,8 @@ interface Props {
   gridView?: boolean;
 }
 const locationOptions = [
-  { value: "ananthara", label: "ANANTHARA HOTEL" },
-  { value: "sonagiri", label: "SONAGIRI 2BHK VILLA" },
+  { value: "", label: "" },
+  { value: "", label: "" },
 ];
 interface CustomDropdownProps {
   value: string;

@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import LinkButton from "../buttons/LinkButton";
-import MenuButton from "./MenuButton";
-import NavMenu from "./NavMenu";
+
 
 const WebsiteNav = () => {
   // const pathname = usePathname();

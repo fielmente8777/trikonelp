@@ -1,7 +1,8 @@
 // useForm.ts
 import { useCallback, useState } from "react";
 import axios from "axios";
-import { contact } from "@/utils/constent";
+import { contact } from "../utils/constent";
+
 
 // Types
 interface BaseFormData {

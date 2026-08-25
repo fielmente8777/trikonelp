@@ -1,7 +1,8 @@
 "use client";
 
+import { FaqSectionProps } from "@/src/@types/landingPageTypes";
 import { useState } from "react";
-import { FaqSectionProps } from "@/@types/landingPageTypes";
+
 
 const Accordion: React.FC<FaqSectionProps["items"][0]> = ({
   q: question,
