@@ -4,6 +4,7 @@ import { SectionWithContainer } from "../components/sectionComponants";
 import SlidingTitle from "../components/sliders/SlidingTitle";
 import Difference from "./(landing-page)/components/Difference";
 import DiningSection from "./(landing-page)/components/Dining";
+import Escape from "./(landing-page)/components/Escape";
 import Ethos from "./(landing-page)/components/Ethos";
 import ExperiencesSection from "./(landing-page)/components/Experience";
 import FAQ from "./(landing-page)/components/Faqs";
@@ -17,7 +18,7 @@ export default function LandingPage() {
       <ImageB hero={landingPageData.hero} />
       <SlidingTitle items={landingPageData.step} />
       <div
-        className="bg-primary border max-lg:hidden border-white/40 backdrop-blur-xs py-6 px-1.5 flex flex-col gap-5"
+        className="max_screen_width bg-primary border max-lg:hidden border-white/40 backdrop-blur-xs py-6 px-1.5 flex flex-col gap-5"
         id="form"
       >
         <Form1 />
@@ -43,6 +44,7 @@ export default function LandingPage() {
       <Ethos {...landingPageData.ethosData} />
       <ExperiencesSection {...landingPageData.experiencesData} />
       <DiningSection {...landingPageData.diningData} />
+      <Escape {...landingPageData.escapeData} />
       <Review {...landingPageData.testimonialsData} />
 
       <FAQ {...landingPageData.faqData} />

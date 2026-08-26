@@ -4,7 +4,7 @@ import LinkButton from "@/src/components/buttons/LinkButton";
 import { SectionWithContainer } from "@/src/components/sectionComponants";
 import SwiperCarousel from "@/src/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/src/components/typography";
-import { BtnNextIcon, BtnPrevIcon } from "@/src/utils/icons";
+import { BtnNextIcon, BtnPrevIcon, SquareIcon } from "@/src/utils/icons";
 import Image from "next/image";
 import { Navigation } from "swiper/modules";
 
@@ -14,7 +14,8 @@ interface RoomsSectionProps {
   description?: string;
   cards: {
     images: string[];
-    category?: string;
+    tags: string[];
+    category: string;
     imageOnly?: boolean;
     title?: string;
     description?: string;
@@ -64,7 +65,7 @@ const Room: React.FC<RoomsSectionProps> = ({
         {/* CARDS */}
         <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
           {filteredCards.map((card, index) => (
-            <RoomsCard key={index} {...card} index={index}/>
+            <RoomsCard key={index} {...card} index={index} />
           ))}
         </div>
       </div>
@@ -76,9 +77,18 @@ export default Room;
 
 export const RoomsCard: React.FC<
   RoomsSectionProps["cards"][0] & { index: number }
-> = ({ title, description, amenities, buttons, images, index }) => {
+> = ({
+  title,
+  category,
+  tags,
+  description,
+  amenities,
+  buttons,
+  images,
+  index,
+}) => {
   return (
-    <article className="flex w-full flex-col overflow-hidden bg-secondary rounded-xl">
+    <article className="flex h-full w-full flex-col overflow-hidden bg-secondary rounded-xl">
       {/* IMAGE SLIDER */}
       <div className="relative aspect-[3.5/2.2] w-full overflow-hidden">
         <SwiperCarousel
@@ -128,35 +138,51 @@ export const RoomsCard: React.FC<
       {/* CONTENT */}
       <div className="flex flex-1 flex-col p-4 md:p-5">
         {/* CATEGORY */}
-        <p className="mb-1.5 text-[10px] uppercase tracking-[0.18em] text-p1 sm:text-xs">
-          {title === "Arch House" ? "Heritage · Families" : "Nature · Couples"}
+        <p className="mb-4 text-xs uppercase text-p1 md:text-[16px]">
+          {category}
         </p>
 
         {/* TITLE */}
-        <h3 className="text-2xl leading-tight text-dark sm:text-3xl">
+        <h3 className="text-2xl text-dark md:text-3xl">
           {title}
         </h3>
 
         {/* DESCRIPTION */}
-        <p className="mt-2 text-xs leading-5 text-grey sm:text-sm">
+        <p className="mt-2 text-xs text-black md:text-lg">
           {description}
         </p>
+
+        {/* TAGS */}
+        {tags && tags.length > 0 && (
+          <div className="py-4 flex flex-wrap gap-2">
+            {tags.map((tag, index) => (
+              <span
+                key={index}
+                className="rounded-full bg-p1/30 px-2.5 py-1 text-xs md:text-sm uppercase text-grey"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* AMENITIES */}
         <ul className="mt-4 space-y-2">
           {amenities?.map((amenity, index) => (
             <li
               key={index}
-              className="flex items-start gap-2 text-xs leading-5 text-grey sm:text-sm"
+              className="flex items-start gap-2 text-xs text-grey md:text-lg"
             >
-              <span className="mt-[2px] shrink-0 text-p1">◇</span>
+              <span className="mt-[2px] ">
+                <SquareIcon/>
+                </span>
               <span>{amenity.label}</span>
             </li>
           ))}
         </ul>
 
         {/* BUTTONS */}
-        <div className="mt-5 flex gap-2 border-t border-grey/20 pt-4">
+        <div className="mt-auto flex gap-2 border-t border-grey/20 pt-4">
           {buttons?.map((button, index) => (
             <LinkButton
               key={index}
@@ -174,8 +200,8 @@ export const RoomsCard: React.FC<
                 sm:text-sm!
                 ${
                   index === 0
-                    ? "border border-primary bg-transparent text-primary"
-                    : "border border-primary bg-primary text-white"
+                    ? "border border-primary bg-white text-primary"
+                    : " bg-primary text-white"
                 }
               `}
             />

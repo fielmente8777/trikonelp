@@ -22,6 +22,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
       defaultPadding={false}
       className="relative w-full md:aspect-16/8 aspect-[3/4] overflow-hidden"
     >
+      {/* ================= BACKGROUND IMAGE SLIDER ================= */}
       <SwiperCarousel
         data={hero.images}
         slidesPerView={1}
@@ -33,7 +34,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
         }}
         loop={true}
         speed={800}
-        className="w-full h-full"
+        className="absolute inset-0 w-full h-full"
         swiperSlideClassName="h-full"
         renderSlide={(image) => (
           <div className="relative w-full h-full">
@@ -44,38 +45,41 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
               priority
               className="object-cover"
             />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 z-10 bg-black/40" />
-
-            {/* Content */}
-            <div className="absolute inset-0 z-20 flex lg:items-end items-center pb-10">
-              <Container>
-                <div className="flex flex-col gap-6">
-                  <div className="grid lg:grid-cols-[1.2fr_1fr] grid-cols-1">
-                    <div className="space-y-2 w-full text-center lg:text-left">
-                      <p className="flex mx-auto lg:mx-0 bg-white/20 backdrop-blur-2xl items-center md:text-[10px] gap-2 text-sm text-white w-fit border border-primary py-1.5 px-3 rounded-full uppercase tracking-widest">
-                        {hero.tag}
-                      </p>
-
-                      <h1
-                        className="font-primary text-4xl md:text-5xl text-white md:max-w-6xl"
-                        dangerouslySetInnerHTML={{
-                          __html: hero.title,
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </Container>
-            </div>
           </div>
         )}
       />
 
-      {/* Navigation */}
+      {/* ================= FIXED OVERLAY ================= */}
+      <div className="absolute inset-0 z-10 bg-black/40" />
+
+      {/* ================= FIXED CONTENT ================= */}
+      <div className="absolute inset-0 z-20 flex lg:items-end items-center pb-10">
+        <Container>
+          <div className="flex flex-col gap-6">
+            <div className="grid lg:grid-cols-[1.2fr_1fr] grid-cols-1">
+              <div className="space-y-2 w-full text-center lg:text-left">
+
+                <p className="flex mx-auto lg:mx-0 bg-white/20 backdrop-blur-2xl items-center md:text-[10px] gap-2 text-sm text-white w-fit border border-primary py-1.5 px-3 rounded-full uppercase tracking-widest">
+                  {hero.tag}
+                </p>
+
+                <h1
+                  className="font-primary text-4xl md:text-5xl text-white md:max-w-6xl"
+                  dangerouslySetInnerHTML={{
+                    __html: hero.title,
+                  }}
+                />
+
+              </div>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      {/* ================= NAVIGATION ================= */}
       <div className="absolute bottom-5 right-5 md:bottom-6 md:right-8 z-30 flex gap-2">
         <button
+          type="button"
           className="image-banner-prev flex items-center justify-center w-10 h-10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors active:scale-95"
           aria-label="Previous slide"
         >
@@ -83,6 +87,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
         </button>
 
         <button
+          type="button"
           className="image-banner-next flex items-center justify-center w-10 h-10 rounded-full text-primary hover:bg-primary hover:text-white transition-colors active:scale-95"
           aria-label="Next slide"
         >

@@ -32,7 +32,7 @@ const DiningSection = ({
 }: DiningSectionProps) => {
   return (
     <section
-      className="relative overflow-hidden bg-primary"
+      className="max_screen_width relative overflow-hidden bg-primary"
     >
       <div className="mx-auto w-full max-w-8xl px-4 py-14 sm:px-6 md:py-20">
         <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_1fr] md:gap-14">
@@ -106,10 +106,8 @@ const DiningSection = ({
                     w-fit
                     justify-center
                     rounded-sm
-                    px-5
-                    py-2.5
-                    text-xs!
-                    sm:text-sm!
+                    md:text-sm
+                    text-xs
                     ${
                       index === 0
                         ? "border border-white bg-white text-primary"

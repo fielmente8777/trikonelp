@@ -2,6 +2,7 @@
 
 import { TestimonialsProps } from "@/src/@types/landingPageTypes";
 import SwiperCarousel from "@/src/components/sliders/SwiperCarousel";
+import { CommaIcon } from "@/src/utils/icons";
 import { useState } from "react";
 import { Autoplay } from "swiper/modules";
 
@@ -59,8 +60,8 @@ const ReviewSlider: React.FC<{
               "
             >
               {/* QUOTE */}
-              <span className="text-2xl leading-none text-p1">
-                ”
+              <span className="text-2xl">
+                <CommaIcon/>
               </span>
 
               {/* REVIEW */}

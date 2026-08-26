@@ -10,6 +10,7 @@ import { BtnNextIcon, BtnPrevIcon } from "@/src/utils/icons";
 interface ExperiencesSectionProps {
   tagline: string;
   title: string;
+  icon: string;
   cards: {
     image: string;
     title: string;
@@ -23,6 +24,7 @@ interface ExperiencesSectionProps {
 const ExperiencesSection = ({
   tagline,
   title,
+  icon,
   cards,
   buttons,
 }: ExperiencesSectionProps) => {
@@ -30,7 +32,10 @@ const ExperiencesSection = ({
     <Section defaultPadding={false} className="bg-secondary">
       {/* HEADING */}
       <div className="mx-auto w-full max-w-6xl px-4 py-14 md:px-6 md:py-20">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
+          <div className="relative mb-3 h-10 aspect-[2/1]">
+            <Image src={icon} alt="" fill className="object-contain" />
+          </div>
           <p className="mb-2 text-[16px] uppercase text-p1">{tagline}</p>
 
           <h2 className="text-2xl text-primary md:text-[40px]">{title}</h2>
