@@ -5,6 +5,7 @@ import LinkButton from "@/src/components/buttons/LinkButton";
 import { Section } from "@/src/components/sectionComponants";
 import SwiperCarousel from "@/src/components/sliders/SwiperCarousel";
 import { Navigation } from "swiper/modules";
+import { BtnNextIcon, BtnPrevIcon } from "@/src/utils/icons";
 
 interface ExperiencesSectionProps {
   tagline: string;
@@ -26,20 +27,13 @@ const ExperiencesSection = ({
   buttons,
 }: ExperiencesSectionProps) => {
   return (
-    <Section
-      defaultPadding={false}
-      className="bg-secondary"
-    >
+    <Section defaultPadding={false} className="bg-secondary">
       {/* HEADING */}
       <div className="mx-auto w-full max-w-6xl px-4 py-14 md:px-6 md:py-20">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="mb-2 text-[16px] uppercase text-p1">
-            {tagline}
-          </p>
+          <p className="mb-2 text-[16px] uppercase text-p1">{tagline}</p>
 
-          <h2 className="text-2xl text-primary md:text-[40px]">
-            {title}
-          </h2>
+          <h2 className="text-2xl text-primary md:text-[40px]">{title}</h2>
         </div>
       </div>
 
@@ -78,9 +72,7 @@ const ExperiencesSection = ({
 
               {/* TITLE */}
               <div className="absolute bottom-0 left-0 w-full bg-primary/50 px-2 py-2 text-center">
-                <p className="text-xs text-white md:text-sm">
-                  {card.title}
-                </p>
+                <p className="text-xs text-white md:text-sm">{card.title}</p>
               </div>
             </div>
           )}
@@ -89,35 +81,19 @@ const ExperiencesSection = ({
         {/* LEFT ARROW */}
         <button
           type="button"
-          className="
-            experience-prev
-            absolute left-3 top-1/2 z-10
-            flex h-7 w-7
-            -translate-y-1/2
-            items-center justify-center
-            rounded-full
-            bg-white
-            text-primary
-          "
+          className="experience-prev absolute left-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-primary active:scale-95"
+          aria-label="Previous experience"
         >
-          ←
+          <BtnPrevIcon />
         </button>
 
         {/* RIGHT ARROW */}
         <button
           type="button"
-          className="
-            experience-next
-            absolute right-3 top-1/2 z-10
-            flex h-7 w-7
-            -translate-y-1/2
-            items-center justify-center
-            rounded-full
-            bg-white
-            text-primary
-          "
+          className="experience-next absolute right-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-primary active:scale-95"
+          aria-label="Next experience"
         >
-          →
+          <BtnNextIcon />
         </button>
       </div>
 

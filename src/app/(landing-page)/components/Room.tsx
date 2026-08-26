@@ -2,8 +2,11 @@
 
 import LinkButton from "@/src/components/buttons/LinkButton";
 import { SectionWithContainer } from "@/src/components/sectionComponants";
+import SwiperCarousel from "@/src/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/src/components/typography";
+import { BtnNextIcon, BtnPrevIcon } from "@/src/utils/icons";
 import Image from "next/image";
+import { Navigation } from "swiper/modules";
 
 interface RoomsSectionProps {
   tagline: string;
@@ -37,14 +40,11 @@ const Room: React.FC<RoomsSectionProps> = ({
   return (
     <SectionWithContainer sectionClassName="bg-primary">
       <div className="mx-auto w-full max-w-7xl py-16 md:py-10">
-
         {/* HEADING */}
         <div className="mb-10 grid grid-cols-1 gap-10 md:grid-cols-[1.1fr_0.9fr]">
           {/* LEFT CONTENT */}
           <div>
-            <p className="mb-2 text-xs uppercase text-p1">
-              {tagline}
-            </p>
+            <p className="mb-2 text-xs uppercase text-p1">{tagline}</p>
 
             <div className="max-w-3xl text-secondary">
               <SectionHeading title={title} />
@@ -64,7 +64,7 @@ const Room: React.FC<RoomsSectionProps> = ({
         {/* CARDS */}
         <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
           {filteredCards.map((card, index) => (
-            <RoomsCard key={index} {...card} />
+            <RoomsCard key={index} {...card} index={index}/>
           ))}
         </div>
       </div>
@@ -74,64 +74,54 @@ const Room: React.FC<RoomsSectionProps> = ({
 
 export default Room;
 
-export const RoomsCard: React.FC<RoomsSectionProps["cards"][0]> = ({
-  title,
-  description,
-  amenities,
-  buttons,
-  images,
-}) => {
+export const RoomsCard: React.FC<
+  RoomsSectionProps["cards"][0] & { index: number }
+> = ({ title, description, amenities, buttons, images, index }) => {
   return (
     <article className="flex w-full flex-col overflow-hidden bg-secondary rounded-xl">
-      {/* IMAGE */}
+      {/* IMAGE SLIDER */}
       <div className="relative aspect-[3.5/2.2] w-full overflow-hidden">
-        <Image
-          src={images[0]}
-          alt={title ?? "Room"}
-          fill
-          sizes="(max-width: 1024px) 100vw, 50vw"
-          className="object-cover"
+        <SwiperCarousel
+          data={images}
+          slidesPerView={1}
+          spaceBetween={0}
+          modules={[Navigation]}
+          navigation={{
+            nextEl: `.rooms-next-${index}`,
+            prevEl: `.rooms-prev-${index}`,
+          }}
+          loop={true}
+          speed={600}
+          className="w-full h-full"
+          swiperSlideClassName="h-full"
+          renderSlide={(image) => (
+            <div className="relative w-full h-full">
+              <Image
+                src={image}
+                alt={title ?? "Room"}
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          )}
         />
 
         {/* IMAGE ARROWS */}
         <button
           type="button"
-          className="
-            absolute
-            left-2
-            top-1/2
-            flex
-            h-7
-            w-7
-            -translate-y-1/2
-            items-center
-            justify-center
-            rounded-full
-            bg-white
-            text-primary
-          "
+          className={`rooms-prev-${index} absolute left-2 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-primary active:scale-95`}
+          aria-label="Previous image"
         >
-          ←
+          <BtnPrevIcon />
         </button>
 
         <button
           type="button"
-          className="
-            absolute
-            right-2
-            top-1/2
-            flex
-            h-7
-            w-7
-            -translate-y-1/2
-            items-center
-            justify-center
-            rounded-full
-            bg-white
-            text-primary
-          "
+          className={`rooms-next-${index} absolute right-2 top-1/2 z-10 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full text-primary active:scale-95`}
+          aria-label="Next image"
         >
-          →
+          <BtnNextIcon />
         </button>
       </div>
 
@@ -160,7 +150,6 @@ export const RoomsCard: React.FC<RoomsSectionProps["cards"][0]> = ({
               className="flex items-start gap-2 text-xs leading-5 text-grey sm:text-sm"
             >
               <span className="mt-[2px] shrink-0 text-p1">◇</span>
-
               <span>{amenity.label}</span>
             </li>
           ))}

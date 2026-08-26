@@ -4,6 +4,7 @@ import { SectionWithContainer } from "../components/sectionComponants";
 import SlidingTitle from "../components/sliders/SlidingTitle";
 import Difference from "./(landing-page)/components/Difference";
 import DiningSection from "./(landing-page)/components/Dining";
+import Ethos from "./(landing-page)/components/Ethos";
 import ExperiencesSection from "./(landing-page)/components/Experience";
 import FAQ from "./(landing-page)/components/Faqs";
 import { landingPageData } from "./(landing-page)/components/pagedata";
@@ -12,8 +13,8 @@ import Room from "./(landing-page)/components/Room";
 
 export default function LandingPage() {
   return (
-    <main >
-      <ImageB {...landingPageData.hero} />
+    <main>
+      <ImageB hero={landingPageData.hero} />
       <SlidingTitle items={landingPageData.step} />
       <div
         className="bg-primary border max-lg:hidden border-white/40 backdrop-blur-xs py-6 px-1.5 flex flex-col gap-5"
@@ -39,11 +40,12 @@ export default function LandingPage() {
       <Difference {...landingPageData.differenceData} />
 
       <Room {...landingPageData.roomsSection} />
+      <Ethos {...landingPageData.ethosData} />
       <ExperiencesSection {...landingPageData.experiencesData} />
-      <DiningSection {...landingPageData.diningData}/>
+      <DiningSection {...landingPageData.diningData} />
       <Review {...landingPageData.testimonialsData} />
 
-      <FAQ {...landingPageData.faqData} />  
+      <FAQ {...landingPageData.faqData} />
       <SectionWithContainer
         defaultPadding={false}
         sectionClassName="py-8 border-b border-primary lg:hidden"

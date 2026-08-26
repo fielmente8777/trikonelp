@@ -3,6 +3,7 @@
 import Image from "next/image";
 import LinkButton from "../buttons/LinkButton";
 import { usePathname } from "next/navigation";
+import { BookingCalenderIcon, CalendarIcon } from "@/src/utils/formIcons";
 
 const LandingNavbar = () => {
   const pathName = usePathname();
@@ -13,11 +14,11 @@ const LandingNavbar = () => {
 
   return (
     <header className="max_screen_width w-full bg-secondary">
-      <nav className="max_width flex items-center justify-between px-4 py-4 md:px-6 lg:px-8">
+      <nav className="max_width flex items-center justify-between ">
         {/* LOGO */}
         <div className="relative aspect-4/4 w-full max-w-25">
           <Image
-            src="/logo-white.png"
+            src="/images/logo.png"
             alt="Logo"
             fill
             priority
@@ -29,6 +30,7 @@ const LandingNavbar = () => {
         <LinkButton
           href="/"
           label="Book Stay"
+          calendarIcon
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -42,6 +44,7 @@ const LandingNavbar = () => {
             border-primary
           "
         />
+
       </nav>
     </header>
   );

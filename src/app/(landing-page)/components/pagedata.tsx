@@ -6,32 +6,14 @@ export const landingPageData = {
   hero: {
     tag: "A restored heritage stay in Nainital",
     title: "<strong> Come Home to </strong> </br> the quiet side of the hills",
-    description:
-      "",
+    description: "",
     benefits:
       "Save 15% when you book direct · No prepayment · Free cancellation",
-    image: "/lp-2/img1.jpg",
-    highlights: [
-      {
-        label: "Rating",
-        value: "4.7★",
-        description: "Guest reviews",
-      },
-      {
-        label: "To Temple",
-        value: "2 min",
-        description: "Walking",
-      },
-      {
-        label: "Rooms",
-        value: "23",
-        description: "Newly built",
-      },
-      {
-        label: "Service",
-        value: "24×7",
-        description: "Guest support",
-      },
+    images: [
+      "/images/home.jpg",
+      "/images/home-2.jpg",
+      "/images/home-3.jpg",
+      "/images/home-4.jpg",
     ],
   },
 
@@ -75,7 +57,7 @@ export const landingPageData = {
       {
         title: "Five Colonial Suites",
 
-        images: ["/lp-2/img2.jpg"],
+        images: ["/images/room1.jpg", "/images/room2.jpg"],
 
         description:
           "Bay windows, reading corners, garden access and the warm, nostalgic feel of a British-era home.",
@@ -110,7 +92,7 @@ export const landingPageData = {
       {
         title: "Eight Dreamy Rooms",
 
-        images: ["/lp-2/img3.jpg"],
+        images: ["/images/room2.jpg", "/images/room1.jpg"],
 
         description:
           "Handcrafted wooden interiors, private balconies and the feeling of a cottage tucked inside the woods.",
@@ -150,19 +132,35 @@ export const landingPageData = {
 
     cards: [
       {
-        image: "/images/bird-watching.jpg",
+        image: "/images/img2.jpg",
         title: "Bird Watching & Nature Retreat",
       },
       {
-        image: "/images/wellness.jpg",
+        image: "/images/img3.jpg",
         title: "Wellness & Fitness",
       },
       {
-        image: "/images/adventure.jpg",
+        image: "/images/img4.jpg",
         title: "Adventure & Trails",
       },
       {
-        image: "/images/art-craft.jpg",
+        image: "/images/img5.jpg",
+        title: "Art & Craft",
+      },
+      {
+        image: "/images/img2.jpg",
+        title: "Bird Watching & Nature Retreat",
+      },
+      {
+        image: "/images/img3.jpg",
+        title: "Wellness & Fitness",
+      },
+      {
+        image: "/images/img4.jpg",
+        title: "Adventure & Trails",
+      },
+      {
+        image: "/images/img5.jpg",
         title: "Art & Craft",
       },
     ],
@@ -196,11 +194,11 @@ export const landingPageData = {
 
     images: [
       {
-        image: "/images/dining-1.jpg",
+        image: "/images/img6.jpg",
         alt: "Home style dining",
       },
       {
-        image: "/images/dining-2.jpg",
+        image: "/images/img7.jpg",
         alt: "Dining at Trikone",
       },
     ],
@@ -251,7 +249,7 @@ export const landingPageData = {
     tagline: "RECOGNITION & GUEST REVIEWS",
     title: "Traveller's Choice: Best Homestay In The North",
 
-    awardImage: "/images/makemytrip-award.jpg",
+    awardImage: "/images/img9.jpg",
     awardAlt: "MakeMyTrip India's Favourite Homestays Award",
     awardLogo: "/images/makemytrip-logo.png",
 
@@ -311,7 +309,25 @@ export const landingPageData = {
         answer: "Your answer here...",
       },
     ],
+    
   },
+  ethosData: {
+  tagline: "One Ethos",
+  title: "We Didn't Build This. We Saved It.",
+  description:
+    "Every stone and beam in this house is a hundred years old — reused, not replaced. We work with local craftsmen, source from the valley, and try to leave Nainital a little better than we found it. Nothing complicated. Just a house, and a community, worth taking care of.",
+  image: "/images/ethos.jpg",
+  buttons: [
+    {
+      label: "Enquire Now",
+      link: "#form",
+    },
+    {
+      label: "Book Now",
+      link: "#form",
+    },
+  ],
+},
 
   //   finalCta: {
   //     image: "/cta.jpg",

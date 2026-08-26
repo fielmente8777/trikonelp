@@ -13,7 +13,7 @@ interface FooterData {
 }
 
 export const footerData: FooterData = {
-  logo: "/footer.png",
+  logo: "/images/footer.png",
 
   lists: [
     {
