@@ -30,7 +30,7 @@ export const footerData: FooterData = {
       title: "Contact",
       links: [
         {
-          label: `Call: ${contact.phone[0]} / ${contact.phone[1] ?? ""}`,
+          label: `Call: ${contact.phone[0]}`,
           href: contact.callCta,
         },
         {

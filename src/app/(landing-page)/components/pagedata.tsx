@@ -317,8 +317,8 @@ export const landingPageData = {
     ],
   },
   escapeData: {
-    title: "What Your Stay Actually Looks Like",
-    description: "",
+    title: "Inside the estate",
+    description: "What your stay actually looks like ",
 
     images: {
       left: ["/images/home.jpg", "/images/img8.jpg", "/images/img7.jpg"],

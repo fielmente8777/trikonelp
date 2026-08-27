@@ -63,13 +63,12 @@ const Escape: React.FC<EscapeProps> = ({
 
         {/* HEADING */}
         <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-          <SectionHeading
-            title={title}
-            titleColor="primary"
-          />
+          <div className="text-p1 text-xs md:text-[16px] uppercase">
+            {title}
+          </div>
 
           {description && (
-            <p className="mt-2 text-sm text-primary/70 md:text-base">
+            <p className="mt-2 text-sm text-primary md:text-[40px] capitalize">
               {description}
             </p>
           )}
@@ -92,7 +91,7 @@ const Escape: React.FC<EscapeProps> = ({
           >
 
             {/* ================= LEFT IMAGE ================= */}
-            <div className="relative min-h-[350px] overflow-hidden md:h-full">
+            <div className="relative min-h-[350px] overflow-hidden md:h-[600px]">
               <SwiperCarousel
                 data={images.left}
                 slidesPerView={1}
@@ -159,8 +158,8 @@ const Escape: React.FC<EscapeProps> = ({
               </div>
 
               {/* STATIC CONTENT */}
-              <div className="flex flex-col justify-center bg-primary px-6 py-8">
-                <p className="mb-3 text-[9px] uppercase tracking-[0.2em] text-p1">
+              <div className="flex flex-col md:aspect-[8/5] md:h-[200px] justify-center bg-primary px-6 py-8">
+                <p className="mb-3 text-[9px] uppercase text-p1">
                   {middleBottom.tagline}
                 </p>
 
@@ -171,7 +170,7 @@ const Escape: React.FC<EscapeProps> = ({
             </div>
 
             {/* ================= RIGHT IMAGE ================= */}
-            <div className="relative min-h-[350px] overflow-hidden md:h-full">
+            <div className="relative min-h-[350px] overflow-hidden md:h-[600px]">
               <SwiperCarousel
                 data={images.right}
                 slidesPerView={1}
@@ -220,7 +219,6 @@ const Escape: React.FC<EscapeProps> = ({
               items-center
               justify-center
               rounded-full
-              bg-white
               text-primary
               shadow-sm
               transition
@@ -249,7 +247,6 @@ const Escape: React.FC<EscapeProps> = ({
               items-center
               justify-center
               rounded-full
-              bg-white
               text-primary
               shadow-sm
               transition
