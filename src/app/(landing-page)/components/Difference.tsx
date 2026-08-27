@@ -35,7 +35,7 @@ const Difference = ({
           </h2>
 
           {/* DESKTOP CTA BUTTONS */}
-          <div className="mt-8 hidden  md:grid grid-cols-2 max-w-[400px] gap-3">
+          <div className="mt-8 hidden  md:grid grid-cols-2 max-w-md gap-3">
             {buttons.map((button, index) => (
               <LinkButton
                 key={index}

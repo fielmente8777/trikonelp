@@ -6,6 +6,10 @@ import { WebProvider } from "../context-api/WebContext";
 import OfferSection from "../components/OfferSection";
 import LandingNavbar from "../components/navbar/LandingNavbar";
 import LandingFooter from "../components/footer/LandingFooter";
+import PopUpForm from "../components/pop-up/PopUpForm";
+import Call from "../components/ContactButton/Call";
+import { contact } from "../utils/constent";
+import Whatsapp from "../components/ContactButton/WhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,15 +52,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${fraunces.variable} ${varelaRound.variable} ${cormorant.variable} h-full antialiased`}
+      
     >
-      <body className="min-h-full flex flex-col {dmSans.variable}">
+      <body className={`${dmSans.variable} ${fraunces.variable} ${varelaRound.variable} ${cormorant.variable} h-full antialiased`} suppressHydrationWarning={true} >
         <WebProvider>
           <OfferSection />
           <LandingNavbar />
 
           {children}
           <LandingFooter />
+          <PopUpForm/>
+          <Call callNumber={contact.phone[0]} />
+          <Whatsapp whatsAppNumber={contact.phone[0]} />
         </WebProvider>
       </body>
     </html>

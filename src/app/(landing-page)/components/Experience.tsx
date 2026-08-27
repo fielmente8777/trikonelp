@@ -63,7 +63,7 @@ const ExperiencesSection = ({
           className="w-full"
           swiperSlideClassName="!h-auto"
           renderSlide={(card) => (
-            <div className="group relative aspect-[3/4] w-full overflow-hidden">
+            <div className="group relative aspect-[3/4] w-full overflow-hidden ">
               <Image
                 src={card.image}
                 alt={card.title}

@@ -107,26 +107,39 @@ const LandingFooter = () => {
             <div className="flex flex-col gap-4">
               {data.lists[1]?.links.map((item, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  {index === 0 ? (
-                    <FiPhone size={19} className="mt-1 shrink-0 text-p1" />
-                  ) : (
-                    <FiMail size={19} className="mt-1 shrink-0 text-p1" />
-                  )}
+                  <span>
+                    {index === 0 ? (
+                      <FiPhone size={19} className="mt-1 shrink-0 text-p1" />
+                    ) : (
+                      <FiMail size={19} className="mt-1 shrink-0 text-p1" />
+                    )}
+                  </span>
 
-                  <Link
-                    href={item.href ?? "#"}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="
-                      text-sm
-                      leading-6
+                  <div className="grid md:grid-cols-[auto_auto_1fr] w-full gap-1">
+                    <Link
+                      href={item.href ?? "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="
                       text-white/90
-                      md:text-base
-                      md:leading-7
                     "
-                  >
-                    {item.label}
-                  </Link>
+                    >
+                      {item.label}
+                    </Link>
+                    {item.href2 && <span className="md:block hidden">/</span>}
+                    {item.href2 && (
+                      <Link
+                        href={item.href2 ?? "#"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                        text-white/90
+                      "
+                      >
+                        {item.label2}
+                      </Link>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>

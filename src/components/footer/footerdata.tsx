@@ -35,7 +35,7 @@ export const footerData: FooterData = {
           label: `Call: ${contact.phone[0]}`,
           href: `tel:${contact.phone[0]}`,
 
-          label2: `Call: ${contact.phone[1]}`,
+          label2:  contact.phone[1],
           href2: `tel:${contact.phone[1]}`,
         },
 

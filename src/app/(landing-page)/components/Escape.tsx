@@ -71,7 +71,7 @@ const Escape: React.FC<EscapeProps> = ({
         </div>
 
         {/* ================= FIXED FRAME ================= */}
-        <div className="relative w-full max-md hidden">
+        <div className="relative w-full max-md:hidden">
           {/* ================= GRID ================= */}
           <div
             className="

@@ -42,7 +42,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
             </h2>
 
             {/* BUTTONS */}
-            <div className="mt-8 hidden grid md:grid-cols-2 max-w-[350px] gap-2">
+            <div className="mt-8 hidden md:grid md:grid-cols-2 lg:max-w-sm gap-2">
               {buttons.map((button, index) => (
                 <LinkButton
                   key={index}
@@ -56,8 +56,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                     rounded-sm
                     px-4
                     py-2
-                    text-xs!
-                    md:text-sm!
+                   uppercase
                     ${
                       index === 0
                         ? "border border-primary bg-white text-primary"
@@ -108,7 +107,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-5 pr-8 text-base md:text-2xl text-round text-grey">
+                      <p className="pb-5 pr-8 text-base text-round text-grey">
                         {faq.answer}
                       </p>
                     </div>
@@ -117,7 +116,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
               );
             })}
           </div>
-           <div className="mt-8 md:hidden grid grid-cols-1 max-w-[350px] gap-2">
+           <div className="mt-8 md:hidden grid grid-cols-1 lg:max-w-[350px] gap-2">
               {buttons.map((button, index) => (
                 <LinkButton
                   key={index}
@@ -126,13 +125,12 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                   whatsAppIcon={index === 0}
                   calendarIcon={index === 1}
                   className={`
+                    uppercase
                     w-full
                     justify-center
                     rounded-sm
                     px-4
                     py-2
-                    text-xs!
-                    md:text-sm!
                     ${
                       index === 0
                         ? "border border-primary bg-white text-primary"

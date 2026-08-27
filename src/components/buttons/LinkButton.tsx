@@ -39,7 +39,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       {href === "#form" ? (
         <button
           onClick={handleClick}
-          className={`flex items-center gap-2 shadow-md border w-fit px-4 py-2 hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
+          className={`flex items-center gap-2 shadow-md border w-fit px-4 py-2 uppercase hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
           {...props}
         >
           {whatsAppIcon && (
@@ -71,7 +71,9 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       ) : (
         <Link
           href={href}
-          className={`flex items-center tracking-widest gap-1 border w-fit px-4 py-2 hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center uppercase tracking-widest gap-1 border w-fit px-4 py-2 hover:scale-95 transition-all duration-300 ease-in-out hover:scale-x-105 active:scale-95 ${className}`}
           {...props}
         >
           {whatsAppIcon && <WhatsAppIcon />}
