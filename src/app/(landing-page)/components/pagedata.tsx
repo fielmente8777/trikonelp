@@ -22,9 +22,10 @@ export const landingPageData = {
       "Save 15% when you book direct · No prepayment · Free cancellation",
     images: [
       "/images/home.jpg",
-      "/images/home-2.jpg",
-      "/images/home-3.jpg",
-      "/images/home-4.jpg",
+      "/images/new/ban1.jpg",
+      "/images/new/ban2.jpg",
+      "/images/new/ban3.jpg",
+      "/images/new/ban4.jpg",
     ],
   },
 
@@ -83,7 +84,7 @@ export const landingPageData = {
         category: "The Bungalow",
         title: "Five Colonial Suites",
 
-        images: ["/images/room1.jpg", "/images/room2.jpg"],
+        images: ["/images/room/room1.jpg", "/images/room/room2.jpg","/images/room/room3.jpg","/images/room/room4.jpg","/images/room/room5.jpg","/images/room/room6.jpg","/images/room/room7.jpg","/images/room/room8.jpg"],
 
         description: "For those who want history under their feet.",
 
@@ -123,7 +124,7 @@ export const landingPageData = {
         category: "The Cottage",
         title: "Eight Dreamy Rooms",
 
-        images: ["/images/room2.jpg", "/images/room1.jpg"],
+        images: ["/images/room/room10.jpg", "/images/room/room11.jpg","/images/room/room12.jpg","/images/room/room13.jpg","/images/room/room14.jpg","/images/room/room15.jpg"],
 
         description: "For those who want the forest at their doorstep.",
 
@@ -166,37 +167,37 @@ export const landingPageData = {
 
     cards: [
       {
-        image: "/images/img2.jpg",
+        image: "/images/new/img1.jpg",
         title: "Bird Watching & Nature Retreat",
       },
       {
-        image: "/images/img3.jpg",
+        image: "/images/new/img2.jpg",
         title: "Wellness & Fitness",
       },
       {
-        image: "/images/img4.jpg",
+        image: "/images/new/img3.jpg",
         title: "Adventure & Trails",
       },
       {
-        image: "/images/img5.jpg",
+        image: "/images/new/img4.jpg",
         title: "Art & Craft",
       },
-      {
-        image: "/images/img2.jpg",
-        title: "Bird Watching & Nature Retreat",
-      },
-      {
-        image: "/images/img3.jpg",
-        title: "Wellness & Fitness",
-      },
-      {
-        image: "/images/img4.jpg",
-        title: "Adventure & Trails",
-      },
-      {
-        image: "/images/img5.jpg",
-        title: "Art & Craft",
-      },
+      // {
+      //   image: "/images/img2.jpg",
+      //   title: "Bird Watching & Nature Retreat",
+      // },
+      // {
+      //   image: "/images/img3.jpg",
+      //   title: "Wellness & Fitness",
+      // },
+      // {
+      //   image: "/images/img4.jpg",
+      //   title: "Adventure & Trails",
+      // },
+      // {
+      //   image: "/images/img5.jpg",
+      //   title: "Art & Craft",
+      // },
     ],
 
     buttons: [
@@ -238,6 +239,22 @@ export const landingPageData = {
         image: "/images/img7.jpg",
         alt: "Dining at Trikone",
       },
+            {
+        image: "/images/new/img5.jpg",
+        alt: "Home style dining",
+      },
+      {
+        image: "/images/new/img6.jpg",
+        alt: "Dining at Trikone",
+      },
+            {
+        image: "/images/new/img7.jpg",
+        alt: "Home style dining",
+      },
+      // {
+      //   image: "/images/img7.jpg",
+      //   alt: "Dining at Trikone",
+      // },
     ],
 
     buttons: [
@@ -356,11 +373,11 @@ export const landingPageData = {
     description: "What your stay actually looks like ",
 
     images: {
-      left: ["/images/home.jpg", "/images/img8.jpg", "/images/img7.jpg"],
+      left: ["/images/gallery/gal1.jpg", "/images/gallery/gal2.jpg", "/images/gallery/gal3.jpg"],
 
-      middleTop: ["/images/home.jpg", "/images/img7.jpg", "/images/img5.jpg"],
+      middleTop: ["/images/gallery/gal4.jpg", "/images/gallery/gal5.jpg", "/images/gallery/gal6.jpg"],
 
-      right: ["/images/img7.jpg", "/images/img8.jpg", "/images/img5.jpg"],
+      right: ["/images/gallery/gal7.jpg", "/images/gallery/gal8.jpg", "/images/gallery/gal9.jpg"],
     },
 
     middleBottom: {
