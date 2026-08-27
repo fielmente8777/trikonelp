@@ -225,10 +225,10 @@ const Form1 = ({ gridView }: Props) => {
         <React.Fragment key={index}>
           {field.type === "date" ? (
             <div
-              className={`bg-secondary flex items-center gap-2.5 lg:shadow lg:rounded-lg ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
+              className={`bg-secondary flex items-center gap-2.5 lg:shadow lg:rounded-lg ${gridView ? "p-4" : "py-2.5 px-3 lg:px-2"}`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
+              <label className="text-dark">{field.icon}</label>
               <DatePicker
                 selected={startDate}
                 onChange={handleDateChange}
@@ -240,7 +240,7 @@ const Form1 = ({ gridView }: Props) => {
                 placeholderText={field.label}
                 calendarClassName="!z-[99999]"
                 popperClassName="!z-[99999]"
-                className={` pointer-events-auto placeholder:text-secondarya outline-none w-full h-full bg-transparent text-base text-secondarya`}
+                className={`pointer-events-auto placeholder:text-grey text-[#303030] outline-none w-full h-full bg-transparent text-base font-medium`}
                 wrapperClassName="w-full h-full !flex items-center"
               />
             </div>
@@ -261,13 +261,13 @@ const Form1 = ({ gridView }: Props) => {
           // ) 
           : field.type === "tel" ? (
             <div
-              className={`bg-secondary flex items-center gap-2.5  lg:shadow lg:rounded-lg ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
+              className={`bg-secondary flex items-center gap-2.5 lg:shadow lg:rounded-lg ${gridView ? "p-4" : "py-2.5 px-3 lg:px-2"}`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
+              <label className="text-dark">{field.icon}</label>
               <div className="relative">
                 <select
-                  className="ps-2 cursor-pointer border-p1 appearance-none w-full placeholder:text-secondarya focus:outline-none text-secondarya"
+                  className="ps-2 cursor-pointer border-p1 appearance-none w-full placeholder:text-grey focus:outline-none text-[#303030] font-medium bg-transparent"
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={(e) => setFieldValue("countryCode", e.target.value)}
@@ -275,12 +275,12 @@ const Form1 = ({ gridView }: Props) => {
                   aria-label="Country Code"
                 >
                   {countries.map((country, index) => (
-                    <option key={index} value={country.code} className="">
+                    <option key={index} value={country.code} className="text-[#303030] bg-white">
                       {country.code}
                     </option>
                   ))}
                 </select>
-                <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none">
+                <span className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none text-dark">
                   <IoIosArrowDown />
                 </span>
               </div>
@@ -288,23 +288,23 @@ const Form1 = ({ gridView }: Props) => {
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full placeholder:text-secondarya focus:outline-none text-secondarya `}
+                className={`w-full placeholder:text-grey focus:outline-none text-[#303030] font-medium bg-transparent`}
                 value={field.value}
                 onChange={field.onChange}
               />
             </div>
           ) : (
             <div
-              className={`flex bg-secondary items-center gap-2.5 lg:shadow lg:rounded-lg ${gridView ? "p-4" : "max-md:pb-4 max-md:pt-2 py-3 lg:px-2"}`}
+              className={`flex bg-secondary items-center gap-2.5 lg:shadow lg:rounded-lg ${gridView ? "p-4" : "py-2.5 px-3 lg:px-2"}`}
               key={index}
             >
-              <label className="text-secondary">{field.icon}</label>
+              <label className="text-dark">{field.icon}</label>
               <input
                 key={index}
                 type={field.type}
                 name={field.name}
                 placeholder={field.label}
-                className={`w-full placeholder:text-secondarya focus:outline-none text-secondarya `}
+                className={`w-full placeholder:text-grey focus:outline-none text-[#303030] font-medium bg-transparent`}
                 value={field.value}
                 onChange={field.onChange}
               />

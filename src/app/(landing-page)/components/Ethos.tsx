@@ -41,7 +41,7 @@ const Ethos = ({
         <div className="absolute inset-0 bg-black/25" />
 
         {/* CONTENT */}
-        <div className="absolute inset-0 z-10 flex items-center">
+        <div className="absolute inset-0 z-10 max-md:px-4  flex items-center">
           <div className="mx-auto w-full">
             <div
               className="
@@ -77,7 +77,7 @@ const Ethos = ({
               </p>
 
               {/* BUTTONS */}
-              <div className="mt-6 flex justify-center gap-2">
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-2">
                 {buttons.map((button, index) => (
                   <LinkButton
                     key={index}
@@ -86,6 +86,7 @@ const Ethos = ({
                     whatsAppIcon={index === 0}
                     calendarIcon={index === 1}
                     className={`
+                      w-full!
                       justify-center
                       rounded-sm
                       md:text-sm

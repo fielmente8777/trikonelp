@@ -9,7 +9,7 @@ Thank you!`);
 export const contact = {
   email: "trikonestays@gmail.com",
   mapUrl: "",
-  phone: ["+917668119130"],
+  phone: ["+917668119130","+91992027115"],
   address: "Sukhatal, Nainital, Uttarakhand (Near Nainital High Court)",
   addressLink: "",
   socialMedia: {

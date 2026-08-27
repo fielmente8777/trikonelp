@@ -29,12 +29,12 @@ const ExperiencesSection = ({
   buttons,
 }: ExperiencesSectionProps) => {
   return (
-    <Section defaultPadding={false} className="bg-secondary">
+    <Section className="bg-secondary">
       {/* HEADING */}
-      <div className="mx-auto w-full max-w-6xl px-4 py-14 md:px-6 md:py-20">
+      <div className="mx-auto w-full max-w-6xl px-4 md:px-6 mb-8 md:mb-10">
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
-          <div className="relative mb-3 h-10 aspect-[2/1]">
-            <Image src={icon} alt="" fill className="object-contain" />
+          <div className="relative mb-3 ">
+            <Image src={icon} alt="experience" width={67} height={56} />
           </div>
           <p className="mb-2 text-[16px] uppercase text-p1">{tagline}</p>
 
@@ -51,7 +51,7 @@ const ExperiencesSection = ({
             prevEl: ".experience-prev",
             nextEl: ".experience-next",
           }}
-          slidesPerView={2}
+          slidesPerView={1}
           spaceBetween={1}
           loop
           breakpoints={{
@@ -76,34 +76,34 @@ const ExperiencesSection = ({
               <div className="absolute inset-0 bg-black/10" />
 
               {/* TITLE */}
-              <div className="absolute bottom-0 left-0 w-full bg-primary/50 px-2 py-2 text-center">
-                <p className="text-xs text-white md:text-sm">{card.title}</p>
+              <div className="absolute bottom-0 left-0 w-full bg-black/40 px-2 py-2 text-center">
+                <p className="text-xs text-white md:text-base">{card.title}</p>
               </div>
             </div>
           )}
         />
 
         {/* LEFT ARROW */}
-        <button
+        {/* <button
           type="button"
           className="experience-prev absolute left-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-primary active:scale-95"
           aria-label="Previous experience"
         >
           <BtnPrevIcon />
-        </button>
+        </button> */}
 
         {/* RIGHT ARROW */}
-        <button
+        {/* <button
           type="button"
           className="experience-next absolute right-3 top-1/2 z-10 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full text-primary active:scale-95"
           aria-label="Next experience"
         >
           <BtnNextIcon />
-        </button>
+        </button> */}
       </div>
 
       {/* CTA */}
-      <div className="flex justify-center gap-2 px-4 py-5 md:py-6">
+      <div className="grid grid-cols-2 mx-auto max-w-[400px] justify-center gap-2 px-4 pt-8">
         {buttons.map((button, index) => (
           <LinkButton
             key={index}
@@ -112,7 +112,7 @@ const ExperiencesSection = ({
             whatsAppIcon={index === 0}
             calendarIcon={index === 1}
             className={`
-              w-fit
+              w-full
               justify-center
               rounded-sm
               px-4
@@ -121,7 +121,7 @@ const ExperiencesSection = ({
               sm:text-sm!
               ${
                 index === 0
-                  ? "border border-primary bg-transparent text-primary"
+                  ? "border border-primary bg-white text-primary"
                   : "border border-primary bg-primary text-white"
               }
             `}

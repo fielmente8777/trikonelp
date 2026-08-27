@@ -29,14 +29,13 @@ const LandingNavbar = () => {
         {/* BOOK STAY */}
         <LinkButton
           href="/"
-          label="Book Stay"
+          label="Book Now"
           calendarIcon
           target="_blank"
           rel="noopener noreferrer"
           className="
             w-fit
             rounded-lg
-            max-md:hidden
             uppercase
             bg-primary
             text-white

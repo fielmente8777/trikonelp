@@ -1,11 +1,22 @@
 import { contact } from "@/src/utils/constent";
+import {
+  BellIcon,
+  Breakfast,
+  BuffeteIcon,
+  CapIcon,
+  CarIcon,
+  EveningIcon,
+  VegIcon,
+  WIcon,
+} from "@/src/utils/icons";
 
 export const landingPageData = {
   offer: ["Direct Booking Offer: Save 15% + Free Breakfast"],
 
   hero: {
     tag: "A restored heritage stay in Nainital",
-    title: "<strong> Come Home to </strong> <br/> the <em>quiet <em/> side of the hills",
+    title:
+      "<strong> Come Home to </strong> <br/> the <em>quiet <em/> side of the hills",
     description: "",
     benefits:
       "Save 15% when you book direct · No prepayment · Free cancellation",
@@ -18,12 +29,26 @@ export const landingPageData = {
   },
 
   step: [
-    "Opposite Nainital High Court",
-    "Ample On-Site Parking",
-    "Home-Style kitchen",
-    "Reliable Wi-Fi For Workations",
-    "Ayarpatta Forest Views",
-    // "Clean, hygienic rooms",
+    {
+      title: "Opposite Nainital High Court",
+      icon: <CarIcon />,
+    },
+    {
+      title: "Ample On-Site Parking",
+      icon: <CarIcon />,
+    },
+    {
+      title: "Home-Style Kitchen",
+      icon: <CapIcon />,
+    },
+    {
+      title: "Reliable Wi-Fi For Workations",
+      icon: <WIcon />,
+    },
+    {
+      title: "Ayarpatta Forest Views",
+      icon: <BellIcon />,
+    },
   ],
   differenceData: {
     tagline: "THE TRIKONE DIFFERENCE",
@@ -48,10 +73,10 @@ export const landingPageData = {
     ],
   },
   roomsSection: {
-    tagline: "One home, two ways to stay",
-    title: "The Deodar Bungalow & Cottage",
+    tagline: "ONE HOME, TWO WAYS TO STAY",
+    title: "The Deodar Bungalow <br/> & Cottage",
     description:
-      "Opposite Nainital High Court, next to the forest. Close enough to explore, quiet enough to exhale.",
+      "Opposite Nainital High Court, next to the forest. Close <br/> enough to explore, quiet enough to exhale.",
 
     cards: [
       {
@@ -195,10 +220,13 @@ export const landingPageData = {
       "One home-style kitchen serves the whole estate, Kumaoni and North Indian plates, fresh mountain produce, chai whenever you want it. Two separate dining rooms mean the bungalow and the cottage each keep their own rhythm.",
 
     features: [
-      "Breakfast included with every stay",
-      "Buffet seating for retreat groups",
-      "Evening chai under the deodars",
-      "Veg, Jain & regional preferences on request",
+      { icon: <Breakfast />, title: "Breakfast included with every stay" },
+      { icon: <BuffeteIcon />, title: "Buffet seating for retreat groups" },
+      { icon: <EveningIcon />, title: "Evening chai under the deodars" },
+      {
+        icon: <VegIcon />,
+        title: "Veg, Jain & regional preferences on request",
+      },
     ],
 
     images: [
@@ -231,7 +259,8 @@ export const landingPageData = {
     awardImage: "/images/img9.jpg",
     awardAlt: "MakeMyTrip India's Favourite Homestays Award",
     awardLogo: "/images/makemytrip.png",
-    reviewDescription:"Awarded at the MakeMyTrip India's Favourite Homestays Awards, judged on what guests actually experienced.",
+    reviewDescription:
+      "Awarded at the MakeMyTrip India's Favourite Homestays Awards, judged on what guests actually experienced.",
 
     reviews: [
       {
@@ -275,27 +304,33 @@ export const landingPageData = {
     faqs: [
       {
         question: "Where Exactly Is Deodar Bungalow & Cottage?",
-        answer: "Your answer here...",
+        answer:
+          "Located directly opposite the Nainital High Court, next to the erstwhile Manu Maharani Hotel (now Namah Nainital).",
       },
       {
         question: "Is Parking Available?",
-        answer: "Your answer here...",
+        answer:
+          "Yes. We offer ample on-site parking, making your drive to Nainital easy and hassle-free.",
       },
       {
-        question: "What Are The Room Rates?",
-        answer: "Your answer here...",
+        question: "What Are The Room Options?",
+        answer:
+          "Choose from thoughtfully designed Deluxe Cottage Rooms and British-Inspired Suites, each offering a comfortable and memorable stay.",
       },
       {
         question: "Can We Book The Whole Property?",
-        answer: "Your answer here...",
+        answer:
+          "Yes. With 13 rooms across two buildings, Deodar Bungalow & Cottage is well suited for private groups, retreats, corporate offsites and extended stays.",
       },
       {
         question: "What About Food?",
-        answer: "Your answer here...",
+        answer:
+          "Our home-style kitchen serves breakfast and meals, prepared with the warmth and comfort of home cooking rather than restaurant-style catering.",
       },
       {
         question: "How Do I Confirm A Booking?",
-        answer: "Your answer here...",
+        answer:
+          "Get in touch with our team to check availability, room options and rates, and we’ll guide you through the booking confirmation process.",
       },
     ],
   },
@@ -304,7 +339,7 @@ export const landingPageData = {
     title: "We Didn't Build This. We Saved It.",
     description:
       "Every stone and beam in this house is a hundred years old — reused, not replaced. We work with local craftsmen, source from the valley, and try to leave Nainital a little better than we found it. Nothing complicated. Just a house, and a community, worth taking care of.",
-    image: "/images/img1.jpg",
+    image: "/images/Rectangle 34624289_11zon.jpg",
     buttons: [
       {
         label: "Enquire Now",

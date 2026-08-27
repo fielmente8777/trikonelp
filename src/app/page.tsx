@@ -17,7 +17,7 @@ export default function LandingPage() {
     <main>
       <ImageB hero={landingPageData.hero} />
       <SlidingTitle items={landingPageData.step} />
-      <div
+      {/* <div
         className="max_screen_width bg-primary border max-lg:hidden border-white/40 backdrop-blur-xs py-6 px-1.5 flex flex-col gap-5"
         id="form"
       >
@@ -26,15 +26,15 @@ export default function LandingPage() {
           className="text-[16px] text-white tracking-widest text-center"
           dangerouslySetInnerHTML={{ __html: landingPageData.hero.benefits }}
         />
-      </div>
+      </div> */}
       <SectionWithContainer
         defaultPadding={false}
-        sectionClassName="py-8 border-b border-primary lg:hidden"
-        containerClassName="space-y-4"
+        sectionClassName="bg-primary border-b border-primary py-6"
+        containerClassName="space-y-4 "
       >
         <Form1 />
         <p
-          className="text-sm text-light max-w-3xl text-center mx-auto"
+          className="text-sm text-light text-secondary max-w-3xl text-center mx-auto"
           dangerouslySetInnerHTML={{ __html: landingPageData.hero.benefits }}
         />
       </SectionWithContainer>
@@ -48,17 +48,6 @@ export default function LandingPage() {
       <Review {...landingPageData.testimonialsData} />
 
       <FAQ {...landingPageData.faqData} />
-      <SectionWithContainer
-        defaultPadding={false}
-        sectionClassName="py-8 border-b border-primary lg:hidden"
-        containerClassName="space-y-4"
-      >
-        <Form1 />
-        <p
-          className="text-sm text-light max-w-3xl text-center mx-auto"
-          dangerouslySetInnerHTML={{ __html: landingPageData.hero.benefits }}
-        />
-      </SectionWithContainer>
     </main>
   );
 }

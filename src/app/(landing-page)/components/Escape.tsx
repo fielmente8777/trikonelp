@@ -55,12 +55,8 @@ const Escape: React.FC<EscapeProps> = ({
   };
 
   return (
-    <SectionWithContainer
-      defaultPadding={false}
-      sectionClassName="bg-secondary"
-    >
-      <div className="mx-auto w-full max-w-7xl px-4 py-14 md:px-6 md:py-20">
-
+    <SectionWithContainer sectionClassName="bg-secondary">
+      <div className="w-full">
         {/* HEADING */}
         <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
           <div className="text-p1 text-xs md:text-[16px] uppercase">
@@ -75,23 +71,23 @@ const Escape: React.FC<EscapeProps> = ({
         </div>
 
         {/* ================= FIXED FRAME ================= */}
-        <div className="relative w-full">
-
+        <div className="relative w-full max-md hidden">
           {/* ================= GRID ================= */}
           <div
             className="
               grid
               w-full
+              max-w-[1320px]
+              mx-auto
               grid-cols-1
-              gap-1
+              gap-2
               overflow-hidden
-              md:h-[470px]
+              md:h-[600px]
               md:grid-cols-[2fr_1fr_1fr]
             "
           >
-
             {/* ================= LEFT IMAGE ================= */}
-            <div className="relative min-h-[350px] overflow-hidden md:h-[600px]">
+            <div className="relative min-h-[350px] overflow-hidden md:h-full">
               <SwiperCarousel
                 data={images.left}
                 slidesPerView={1}
@@ -123,8 +119,7 @@ const Escape: React.FC<EscapeProps> = ({
             </div>
 
             {/* ================= MIDDLE ================= */}
-            <div className="grid min-h-[470px] grid-rows-[1fr_1fr] gap-1">
-
+            <div className="grid min-h-[470px] md:min-h-0 grid-rows-[1fr_1fr] gap-2">
               {/* MIDDLE IMAGE */}
               <div className="relative min-h-[220px] overflow-hidden">
                 <SwiperCarousel
@@ -158,8 +153,8 @@ const Escape: React.FC<EscapeProps> = ({
               </div>
 
               {/* STATIC CONTENT */}
-              <div className="flex flex-col md:aspect-[8/5] md:h-[200px] justify-center bg-primary px-6 py-8">
-                <p className="mb-3 text-[8px] md:text-[10px] uppercase text-p1">
+              <div className="flex flex-col h-full w-full justify-center bg-primary p-5 md:p-6">
+                <p className="mb-3 text-[9px] uppercase text-p1">
                   {middleBottom.tagline}
                 </p>
 
@@ -170,7 +165,7 @@ const Escape: React.FC<EscapeProps> = ({
             </div>
 
             {/* ================= RIGHT IMAGE ================= */}
-            <div className="relative min-h-[350px] overflow-hidden md:h-[600px]">
+            <div className="relative min-h-[350px] overflow-hidden md:h-full">
               <SwiperCarousel
                 data={images.right}
                 slidesPerView={1}
@@ -259,8 +254,49 @@ const Escape: React.FC<EscapeProps> = ({
           </button>
         </div>
 
+        {/* ================= MOBILE IMAGE SLIDER ================= */}
+        <div className="md:hidden">
+          <div className="relative w-full overflow-hidden mb-4 rounded-md">
+            <SwiperCarousel
+              data={[...images.left, ...images.middleTop, ...images.right]}
+              slidesPerView={1}
+              spaceBetween={0}
+              loop
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              speed={900}
+              className="h-[400px] w-full"
+              swiperSlideClassName="h-full"
+              renderSlide={(image) => (
+                <div className="relative h-full w-full">
+                  <Image
+                    src={image}
+                    alt={title}
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                </div>
+              )}
+            />
+          </div>
+
+          {/* MOBILE CONTENT */}
+          <div className="flex min-h-[220px] w-full flex-col justify-center bg-primary p-5">
+            <p className="mb-3 text-[9px] uppercase text-p1">
+              {middleBottom.tagline}
+            </p>
+
+            <h3 className="text-2xl text-round text-white">
+              {middleBottom.title}
+            </h3>
+          </div>
+        </div>
         {/* ================= CTA BUTTONS ================= */}
-        <div className="flex justify-center gap-2 pt-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 max-w-[400px] mx-auto justify-center gap-2 pt-6">
           {buttons.map((button, index) => (
             <LinkButton
               key={index}
@@ -269,7 +305,7 @@ const Escape: React.FC<EscapeProps> = ({
               whatsAppIcon={index === 0}
               calendarIcon={index === 1}
               className={`
-                w-fit
+                w-full
                 justify-center
                 rounded-sm
                 px-5

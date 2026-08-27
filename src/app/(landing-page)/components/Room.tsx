@@ -40,9 +40,9 @@ const Room: React.FC<RoomsSectionProps> = ({
 
   return (
     <SectionWithContainer sectionClassName="bg-primary">
-      <div className="mx-auto w-full max-w-7xl py-16 md:py-10">
+      <div className="w-full">
         {/* HEADING */}
-        <div className="mb-10 grid grid-cols-1 gap-10 md:grid-cols-[1.1fr_0.9fr]">
+        <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_0.9fr]">
           {/* LEFT CONTENT */}
           <div>
             <p className="mb-2 text-xs uppercase text-p1">{tagline}</p>
@@ -54,16 +54,17 @@ const Room: React.FC<RoomsSectionProps> = ({
 
           {/* RIGHT DESCRIPTION */}
           {description && (
-            <div className="flex mt-8">
-              <p className="max-w-md text-sm text-secondary/80 md:text-lg">
-                {description}
-              </p>
+            <div className="flex flex-col justify-end text-secondary text-left mt-4 md:mt-6">
+              <p
+                className="max-w-md text-sm sm:text-base md:text-[18px] md:ml-auto"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
             </div>
           )}
         </div>
 
         {/* CARDS */}
-        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
+        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2  ">
           {filteredCards.map((card, index) => (
             <RoomsCard key={index} {...card} index={index} />
           ))}
@@ -88,7 +89,7 @@ export const RoomsCard: React.FC<
   index,
 }) => {
   return (
-    <article className="flex h-full w-full flex-col overflow-hidden bg-secondary rounded-xl">
+    <article className="flex h-full w-full flex-col overflow-hidden bg-secondary rounded-xl mt-4">
       {/* IMAGE SLIDER */}
       <div className="relative aspect-[3.5/2.2] w-full overflow-hidden">
         <SwiperCarousel
@@ -143,7 +144,7 @@ export const RoomsCard: React.FC<
         </p>
 
         {/* TITLE */}
-        <h3 className="text-2xl text-dark md:text-3xl">
+        <h3 className="text-xl text-dark md:text-3xl">
           {title}
         </h3>
 
@@ -182,7 +183,7 @@ export const RoomsCard: React.FC<
         </ul>
 
         {/* BUTTONS */}
-        <div className="mt-auto flex gap-2 border-t border-grey/20 pt-4">
+        <div className="mt-auto max-md:flex-col flex gap-2 pt-4">
           {buttons?.map((button, index) => (
             <LinkButton
               key={index}

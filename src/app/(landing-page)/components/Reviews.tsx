@@ -3,7 +3,10 @@
 import Image from "next/image";
 
 import ReviewSlider from "./slider/ReviewSlider";
-import { Section, SectionWithContainer } from "@/src/components/sectionComponants";
+import {
+  Section,
+  SectionWithContainer,
+} from "@/src/components/sectionComponants";
 import { TestimonialsProps } from "@/src/@types/landingPageTypes";
 
 interface ReviewProps extends TestimonialsProps {
@@ -23,12 +26,8 @@ const Review: React.FC<ReviewProps> = ({
   reviewDescription,
 }) => {
   return (
-    <Section
-      defaultPadding={false}
-      className="bg-secondary "
-    >
+    <Section className="bg-secondary">
       <div className="grid w-full grid-cols-1 md:grid-cols-2 border-y border-primary">
-
         {/* ================= LEFT ================= */}
         <div
           className="
@@ -39,9 +38,9 @@ const Review: React.FC<ReviewProps> = ({
             justify-center
             bg-primary
             px-6
-            py-12
+            py-6
             sm:px-10
-            md:min-h-[560px]
+            md:min-h-[500px]
             lg:px-14
           "
         >
@@ -73,20 +72,22 @@ const Review: React.FC<ReviewProps> = ({
         {/* ================= RIGHT ================= */}
         <div
           className="
-            min-w-0
             overflow-hidden
             bg-secondary
-            px-6
+            
             py-12
-            sm:px-10
-            md:px-8
-            md:py-14
-            lg:px-12
-            xl:px-16
+          
           "
         >
           {/* HEADING */}
-          <div className="mb-8">
+          <div
+            className="mb-8 px-6
+            
+            sm:px-10
+            md:px-8
+            lg:px-12
+            xl:px-16"
+          >
             <p className="mb-3 text-xs md:text-[16px] uppercase text-p1">
               {tagline}
             </p>
@@ -124,7 +125,16 @@ const Review: React.FC<ReviewProps> = ({
           </div>
 
           {/* TESTIMONIAL SLIDER */}
-          <ReviewSlider reviews={reviews} />
+          <div
+            className="overflow-hidden ps-6
+           
+            sm:ps-10
+            md:ps-8
+            lg:ps-12
+            xl:ps-16 "
+          >
+            <ReviewSlider reviews={reviews} />
+          </div>
         </div>
       </div>
     </Section>

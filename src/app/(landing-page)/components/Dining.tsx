@@ -6,12 +6,18 @@ import {
   Section,
   SectionWithContainer,
 } from "@/src/components/sectionComponants";
+import SwiperCarousel from "@/src/components/sliders/SwiperCarousel";
+import { Autoplay } from "swiper/modules";
+import { JSX } from "react/jsx-runtime";
 
 interface DiningSectionProps {
   tagline: string;
   title: string;
   description: string;
-  features: string[];
+  features: {
+    icon: JSX.Element;
+    title: string;
+  }[];
   images: {
     image: string;
     alt: string;
@@ -31,18 +37,13 @@ const DiningSection = ({
   buttons,
 }: DiningSectionProps) => {
   return (
-    <section
-      className="max_screen_width relative overflow-hidden bg-primary"
-    >
-      <div className="mx-auto w-full max-w-8xl px-4 py-14 sm:px-6 md:py-20">
-        <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_1fr] md:gap-14">
+    <SectionWithContainer sectionClassName="bg-primary">
+      <div className="w-full">
+        <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_1fr] md:gap-4">
           {/* LEFT - IMAGES */}
-          <div className="grid w-full grid-cols-[1.72fr_1fr] gap-2 aspect-[1.5/0.94]">
+          <div className="md:grid w-full hidden grid-cols-[1.72fr_1fr] gap-2 aspect-[4/2.6]">
             {images.map((item, index) => (
-              <div
-                key={index}
-                className="relative overflow-hidden"
-              >
+              <div key={index} className="relative overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.alt}
@@ -69,23 +70,54 @@ const DiningSection = ({
             {/* FEATURES */}
             <div className="mt-6 flex max-w-xl flex-wrap gap-2">
               {features.map((feature, index) => (
-                <span
+                <div
                   key={index}
-                  className="
-                    rounded-full
+                  className="flex gap-2 item-center w-fit rounded-full
                     border border-white/20
                     bg-white/10
                     px-3
-                    py-1.5
-                    text-[10px]
-                    text-white/90
-                    md:text-sm
-                  "
+                    py-1.5"
                 >
-                  {feature}
-                </span>
+                  <span>{feature.icon}</span>
+                  <p
+                    className="
+                    text-white/90
+                    text-sm
+                  "
+                  >
+                    {feature.title}
+                  </p>
+                </div>
               ))}
             </div>
+
+            <div className="mt-6 md:hidden block ">
+               <SwiperCarousel
+              data={images}
+              slidesPerView={1}
+              spaceBetween={0}
+              loop
+              modules={[Autoplay]}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+              }}
+              speed={900}
+              className="h-[400px] w-full"
+              swiperSlideClassName="h-full"
+              renderSlide={(image) => (
+                <div className="relative h-full w-full">
+                  <Image
+                    src={image.image}
+                    alt={image.alt}
+                    fill
+                    sizes="100vw"
+                    className="object-cover"
+                  />
+                </div>
+              )}
+            />
+              </div>
 
             {/* DESCRIPTION */}
             <p className="mt-7 md:max-w-[620px] text-sm text-white/80 md:text-lg">
@@ -93,7 +125,7 @@ const DiningSection = ({
             </p>
 
             {/* BUTTONS */}
-            <div className="mt-7 flex flex-wrap gap-2">
+            <div className="mt-7 grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-2">
               {buttons.map((button, index) => (
                 <LinkButton
                   key={index}
@@ -102,7 +134,7 @@ const DiningSection = ({
                   whatsAppIcon={index === 0}
                   calendarIcon={index === 1}
                   className={`
-                    w-fit
+                    w-full
                     justify-center
                     rounded-sm
                     md:text-sm
@@ -119,7 +151,7 @@ const DiningSection = ({
           </div>
         </div>
       </div>
-    </section>
+    </SectionWithContainer>
   );
 };
 

@@ -42,7 +42,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
             </h2>
 
             {/* BUTTONS */}
-            <div className="mt-8 flex flex-wrap gap-2">
+            <div className="mt-8 hidden grid md:grid-cols-2 max-w-[350px] gap-2">
               {buttons.map((button, index) => (
                 <LinkButton
                   key={index}
@@ -51,13 +51,13 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                   whatsAppIcon={index === 0}
                   calendarIcon={index === 1}
                   className={`
-                    w-fit
+                    w-full
                     justify-center
                     rounded-sm
                     px-4
                     py-2
                     text-xs!
-                    sm:text-sm!
+                    md:text-sm!
                     ${
                       index === 0
                         ? "border border-primary bg-white text-primary"
@@ -117,6 +117,31 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
               );
             })}
           </div>
+           <div className="mt-8 md:hidden grid grid-cols-1 max-w-[350px] gap-2">
+              {buttons.map((button, index) => (
+                <LinkButton
+                  key={index}
+                  href={button.link}
+                  label={button.label}
+                  whatsAppIcon={index === 0}
+                  calendarIcon={index === 1}
+                  className={`
+                    w-full
+                    justify-center
+                    rounded-sm
+                    px-4
+                    py-2
+                    text-xs!
+                    md:text-sm!
+                    ${
+                      index === 0
+                        ? "border border-primary bg-white text-primary"
+                        : "border border-primary bg-primary text-white"
+                    }
+                  `}
+                />
+              ))}
+            </div>
         </div>
       </div>
     </SectionWithContainer>

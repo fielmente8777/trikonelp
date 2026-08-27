@@ -7,7 +7,9 @@ interface FooterData {
     title?: string;
     links: {
       label?: string;
+      label2?: string;
       href?: string;
+      href2?: string;
     }[];
   }[];
 }
@@ -31,8 +33,12 @@ export const footerData: FooterData = {
       links: [
         {
           label: `Call: ${contact.phone[0]}`,
-          href: contact.callCta,
+          href: `tel:${contact.phone[0]}`,
+
+          label2: `Call: ${contact.phone[1]}`,
+          href2: `tel:${contact.phone[1]}`,
         },
+
         {
           label: `Email: ${contact.email}`,
           href: `mailto:${contact.email}`,

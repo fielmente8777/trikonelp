@@ -24,10 +24,10 @@ const ReviewSlider: React.FC<{
           delay: 3000,
           disableOnInteraction: false,
         }}
-        slidesPerView={1}
+        slidesPerView={1.3}
         spaceBetween={20}
         loop
-        className="!overflow-visible !pb-2"
+        className="!pb-2"
         breakpoints={{
           640: {
             slidesPerView: 1.2,
@@ -39,7 +39,7 @@ const ReviewSlider: React.FC<{
             slidesPerView: 1.8,
           },
           1280: {
-            slidesPerView: 2,
+            slidesPerView: 2.3,
           },
         }}
         renderSlide={(item, index) => {
