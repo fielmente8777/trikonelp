@@ -64,7 +64,7 @@ const Room: React.FC<RoomsSectionProps> = ({
         </div>
 
         {/* CARDS */}
-        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2  ">
+        <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
           {filteredCards.map((card, index) => (
             <RoomsCard key={index} {...card} index={index} />
           ))}
@@ -89,7 +89,7 @@ export const RoomsCard: React.FC<
   index,
 }) => {
   return (
-    <article className="flex h-full w-full flex-col overflow-hidden bg-secondary rounded-xl mt-4">
+    <article className="flex h-full w-full flex-col overflow-hidden bg-secondary rounded-xl">
       {/* IMAGE SLIDER */}
       <div className="relative aspect-[3.5/2.2] w-full overflow-hidden">
         <SwiperCarousel
