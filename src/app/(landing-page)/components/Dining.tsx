@@ -38,61 +38,73 @@ const DiningSection = ({
 }: DiningSectionProps) => {
   return (
     <SectionWithContainer sectionClassName="bg-primary">
-      <div className="w-full">
-        <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_1fr] md:gap-4">
-          {/* LEFT - IMAGES */}
-          <div className="md:grid w-full hidden grid-cols-[1.72fr_1fr] gap-2 aspect-[4/2.6]">
-            {images.map((item, index) => (
-              <div key={index} className="relative overflow-hidden">
+      <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_1fr] md:gap-4">
+        {/* LEFT - IMAGES */}
+        <div className="hidden md:block overflow-hidden w-full">
+          <SwiperCarousel
+            data={images}
+            slidesPerView={1.4}
+            spaceBetween={16}
+            loop={true}
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            speed={900}
+            className="w-full"
+            renderSlide={(image) => (
+              <div className="relative aspect-[4/4] w-full">
                 <Image
-                  src={item.image}
-                  alt={item.alt}
+                  src={image.image}
+                  alt={image.alt}
                   fill
-                  sizes="(max-width: 768px) 50vw, 40vw"
+                  sizes="100vw"
                   className="object-cover"
                 />
               </div>
-            ))}
-          </div>
+            )}
+          />
+        </div>
 
-          {/* RIGHT - CONTENT */}
-          <div className="flex flex-col justify-center text-white ">
-            {/* TAGLINE */}
-            <p className="mb-3 text-xs uppercase text-p1 md:text-[16px]">
-              {tagline}
-            </p>
+        {/* RIGHT - CONTENT */}
+        <div className="flex flex-col justify-center text-white ">
+          {/* TAGLINE */}
+          <p className="mb-3 max-md:text-xs uppercase text-p1 ">
+            {tagline}
+          </p>
 
-            {/* TITLE */}
-            <h2 className="md:max-w-2xl text-3xl text-white text-round  md:text-[40px]">
-              {title}
-            </h2>
+          {/* TITLE */}
+          <h2 className="md:max-w-2xl text-3xl text-white text-round  md:text-[40px]">
+            {title}
+          </h2>
 
-            {/* FEATURES */}
-            <div className="mt-6 flex max-w-xl flex-wrap gap-2">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex gap-2 item-center w-fit rounded-full
+          {/* FEATURES */}
+          <div className="mt-6 flex max-w-xl flex-wrap gap-2">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="flex gap-2 item-center w-fit rounded-full
                     border border-white/20
                     bg-white/10
                     px-3
                     py-1.5"
-                >
-                  <span>{feature.icon}</span>
-                  <p
-                    className="
+              >
+                <span>{feature.icon}</span>
+                <p
+                  className="
                     text-white/90
                     text-sm
                   "
-                  >
-                    {feature.title}
-                  </p>
-                </div>
-              ))}
-            </div>
+                >
+                  {feature.title}
+                </p>
+              </div>
+            ))}
+          </div>
 
-            <div className="mt-6 md:hidden block ">
-               <SwiperCarousel
+          <div className="mt-6 md:hidden block ">
+            <SwiperCarousel
               data={images}
               slidesPerView={1}
               spaceBetween={0}
@@ -117,23 +129,23 @@ const DiningSection = ({
                 </div>
               )}
             />
-              </div>
+          </div>
 
-            {/* DESCRIPTION */}
-            <p className="mt-7 md:max-w-[620px] text-sm text-white/80 md:text-lg">
-              {description}
-            </p>
+          {/* DESCRIPTION */}
+          <p className="mt-7 md:max-w-[620px] text-sm text-white/80 md:text-lg">
+            {description}
+          </p>
 
-            {/* BUTTONS */}
-            <div className="mt-7 grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-2">
-              {buttons.map((button, index) => (
-                <LinkButton
-                  key={index}
-                  href={button.link}
-                  label={button.label}
-                  whatsAppIcon={index === 0}
-                  calendarIcon={index === 1}
-                  className={`
+          {/* BUTTONS */}
+          <div className="mt-7 grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-2">
+            {buttons.map((button, index) => (
+              <LinkButton
+                key={index}
+                href={button.link}
+                label={button.label}
+                whatsAppIcon={index === 0}
+                calendarIcon={index === 1}
+                className={`
                     w-full
                     justify-center
                     rounded-sm
@@ -145,9 +157,8 @@ const DiningSection = ({
                         : "border border-p1 bg-p1 text-white"
                     }
                   `}
-                />
-              ))}
-            </div>
+              />
+            ))}
           </div>
         </div>
       </div>

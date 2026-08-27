@@ -17,16 +17,7 @@ export default function LandingPage() {
     <main>
       <ImageB hero={landingPageData.hero} />
       <SlidingTitle items={landingPageData.step} />
-      {/* <div
-        className="max_screen_width bg-primary border max-lg:hidden border-white/40 backdrop-blur-xs py-6 px-1.5 flex flex-col gap-5"
-        id="form"
-      >
-        <Form1 />
-        <p
-          className="text-[16px] text-white tracking-widest text-center"
-          dangerouslySetInnerHTML={{ __html: landingPageData.hero.benefits }}
-        />
-      </div> */}
+      
       <SectionWithContainer
         defaultPadding={false}
         sectionClassName="bg-primary border-b border-primary py-6"

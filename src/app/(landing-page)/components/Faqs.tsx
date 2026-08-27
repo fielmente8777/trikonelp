@@ -107,7 +107,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-5 pr-8 text-base md:text-2xl text-round text-grey">
+                      <p className="pb-5 pr-8 text-base text-round text-grey">
                         {faq.answer}
                       </p>
                     </div>
