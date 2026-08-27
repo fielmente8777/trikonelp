@@ -67,7 +67,7 @@ const Ethos = ({
 
               {/* TITLE */}
               <h2
-                className="text-2xl text-white md:text-[40px]"
+                className="text-[22px] leading-snug text-white md:text-[40px]"
                 dangerouslySetInnerHTML={{ __html: title }}
               />
 

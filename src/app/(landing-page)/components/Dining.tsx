@@ -31,10 +31,8 @@ const DiningSection = ({
   buttons,
 }: DiningSectionProps) => {
   return (
-    <section
-      className="max_screen_width relative overflow-hidden bg-primary"
-    >
-      <div className="mx-auto w-full max-w-8xl px-4 py-14 sm:px-6 md:py-20">
+    <SectionWithContainer sectionClassName="bg-primary">
+      <div className="w-full">
         <div className="grid w-full grid-cols-1 items-center gap-8 md:grid-cols-[1.05fr_1fr] md:gap-14">
           {/* LEFT - IMAGES */}
           <div className="grid w-full grid-cols-[1.72fr_1fr] gap-2 aspect-[1.5/0.94]">
@@ -62,7 +60,7 @@ const DiningSection = ({
             </p>
 
             {/* TITLE */}
-            <h2 className="md:max-w-2xl text-3xl leading-[1.15] text-white sm:text-4xl md:text-[42px] lg:text-[48px]">
+            <h2 className="md:max-w-2xl text-[22px] leading-snug text-white md:text-[42px] lg:text-[48px]">
               {title}
             </h2>
 
@@ -120,7 +118,7 @@ const DiningSection = ({
           </div>
         </div>
       </div>
-    </section>
+    </SectionWithContainer>
   );
 };
 

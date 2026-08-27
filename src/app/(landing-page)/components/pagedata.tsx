@@ -48,10 +48,10 @@ export const landingPageData = {
     ],
   },
   roomsSection: {
-    tagline: "One home, two ways to stay",
-    title: "The Deodar Bungalow & Cottage",
+    tagline: "ONE HOME, TWO WAYS TO STAY",
+    title: "The Deodar Bungalow <br/> & Cottage",
     description:
-      "Opposite Nainital High Court, next to the forest. Close enough to explore, quiet enough to exhale.",
+      "Opposite Nainital High Court, next to the forest. Close <br/> enough to explore, quiet enough to exhale.",
 
     cards: [
       {

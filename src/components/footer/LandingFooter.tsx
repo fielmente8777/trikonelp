@@ -23,12 +23,12 @@ const LandingFooter = () => {
       {/* ================= BOOKING FORM ================= */}
       <div className="border-y border-white/20">
         <Container>
-          <div className="py-6 md:py-7 text-black">
+          <div className="py-2 text-black">
             {/* FORM */}
             <Form1 />
 
             {/* OFFER TEXT */}
-            <p className="mt-5 text-center text-xs text-white/90 md:text-sm">
+            <p className="mt-2 text-center text-xs text-white/90 md:text-sm">
               Save 15% when you book direct · Free cancellation on most dates*
             </p>
           </div>

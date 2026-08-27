@@ -23,10 +23,7 @@ const Review: React.FC<ReviewProps> = ({
   reviewDescription,
 }) => {
   return (
-    <Section
-      defaultPadding={false}
-      className="bg-secondary "
-    >
+    <Section className="bg-secondary">
       <div className="grid w-full grid-cols-1 md:grid-cols-2 border-y border-primary">
 
         {/* ================= LEFT ================= */}
@@ -39,9 +36,9 @@ const Review: React.FC<ReviewProps> = ({
             justify-center
             bg-primary
             px-6
-            py-12
+            py-6
             sm:px-10
-            md:min-h-[560px]
+            md:min-h-[500px]
             lg:px-14
           "
         >
@@ -77,10 +74,9 @@ const Review: React.FC<ReviewProps> = ({
             overflow-hidden
             bg-secondary
             px-6
-            py-12
+            py-6
             sm:px-10
             md:px-8
-            md:py-14
             lg:px-12
             xl:px-16
           "
@@ -94,10 +90,9 @@ const Review: React.FC<ReviewProps> = ({
             <h2
               className="
                 max-w-2xl
-                text-3xl
-                leading-[1.15]
+                text-[22px]
+                leading-snug
                 text-primary
-                sm:text-4xl
                 lg:text-[40px]
               "
             >

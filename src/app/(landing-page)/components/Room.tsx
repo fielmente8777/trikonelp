@@ -40,24 +40,28 @@ const Room: React.FC<RoomsSectionProps> = ({
 
   return (
     <SectionWithContainer sectionClassName="bg-primary">
-      <div className="mx-auto w-full max-w-7xl py-16 md:py-10">
+      <div className="w-full">
         {/* HEADING */}
-        <div className="mb-10 grid grid-cols-1 gap-10 md:grid-cols-[1.1fr_0.9fr]">
+        <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_0.9fr]">
           {/* LEFT CONTENT */}
           <div>
             <p className="mb-2 text-xs uppercase text-p1">{tagline}</p>
 
             <div className="max-w-3xl text-secondary">
-              <SectionHeading title={title} />
+              <SectionHeading
+                title={title}
+                titleClassName="text-[22px] md:text-[40px] leading-snug"
+              />
             </div>
           </div>
 
           {/* RIGHT DESCRIPTION */}
           {description && (
-            <div className="flex mt-8">
-              <p className="max-w-md text-sm text-secondary/80 md:text-lg">
-                {description}
-              </p>
+            <div className="flex flex-col justify-end text-left md:text-right mt-4 md:mt-6">
+              <p
+                className="max-w-md text-sm sm:text-base md:text-[18px] md:ml-auto"
+                dangerouslySetInnerHTML={{ __html: description }}
+              />
             </div>
           )}
         </div>

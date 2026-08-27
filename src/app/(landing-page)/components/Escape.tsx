@@ -55,11 +55,8 @@ const Escape: React.FC<EscapeProps> = ({
   };
 
   return (
-    <SectionWithContainer
-      defaultPadding={false}
-      sectionClassName="bg-secondary"
-    >
-      <div className="mx-auto w-full max-w-7xl px-4 py-14 md:px-6 md:py-20">
+    <SectionWithContainer sectionClassName="bg-secondary">
+      <div className="w-full">
 
         {/* HEADING */}
         <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
@@ -68,7 +65,7 @@ const Escape: React.FC<EscapeProps> = ({
           </div>
 
           {description && (
-            <p className="mt-2 text-sm text-primary md:text-[40px] capitalize">
+            <p className="mt-2 text-[22px] leading-snug text-primary md:text-[40px] capitalize">
               {description}
             </p>
           )}
@@ -82,16 +79,18 @@ const Escape: React.FC<EscapeProps> = ({
             className="
               grid
               w-full
+              max-w-[1320px]
+              mx-auto
               grid-cols-1
-              gap-1
+              gap-2
               overflow-hidden
-              md:h-[470px]
+              md:h-[600px]
               md:grid-cols-[2fr_1fr_1fr]
             "
           >
 
             {/* ================= LEFT IMAGE ================= */}
-            <div className="relative min-h-[350px] overflow-hidden md:h-[600px]">
+            <div className="relative min-h-[350px] overflow-hidden md:h-full">
               <SwiperCarousel
                 data={images.left}
                 slidesPerView={1}
@@ -123,7 +122,7 @@ const Escape: React.FC<EscapeProps> = ({
             </div>
 
             {/* ================= MIDDLE ================= */}
-            <div className="grid min-h-[470px] grid-rows-[1fr_1fr] gap-1">
+            <div className="grid min-h-[470px] md:min-h-0 grid-rows-[1fr_1fr] gap-2">
 
               {/* MIDDLE IMAGE */}
               <div className="relative min-h-[220px] overflow-hidden">
@@ -158,7 +157,7 @@ const Escape: React.FC<EscapeProps> = ({
               </div>
 
               {/* STATIC CONTENT */}
-              <div className="flex flex-col md:aspect-[8/5] md:h-[200px] justify-center bg-primary px-6 py-8">
+              <div className="flex flex-col h-full w-full justify-center bg-primary p-5 md:p-6">
                 <p className="mb-3 text-[9px] uppercase text-p1">
                   {middleBottom.tagline}
                 </p>
@@ -170,7 +169,7 @@ const Escape: React.FC<EscapeProps> = ({
             </div>
 
             {/* ================= RIGHT IMAGE ================= */}
-            <div className="relative min-h-[350px] overflow-hidden md:h-[600px]">
+            <div className="relative min-h-[350px] overflow-hidden md:h-full">
               <SwiperCarousel
                 data={images.right}
                 slidesPerView={1}
@@ -260,7 +259,7 @@ const Escape: React.FC<EscapeProps> = ({
         </div>
 
         {/* ================= CTA BUTTONS ================= */}
-        <div className="flex justify-center gap-2 pt-7">
+        <div className="flex justify-center gap-2 pt-4">
           {buttons.map((button, index) => (
             <LinkButton
               key={index}

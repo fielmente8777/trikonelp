@@ -37,7 +37,7 @@ const FAQ = ({
       sectionClassName="bg-secondary"
       containerId="#faqs"
     >
-      <div className="mx-auto w-full max-w-7xl ">
+      <div className="w-full">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           
           {/* LEFT CONTENT */}
@@ -46,7 +46,7 @@ const FAQ = ({
               {tagline}
             </p>
 
-            <h2 className="max-w-md text-3xl leading-tight text-primary md:text-4xl lg:text-[42px]">
+            <h2 className="max-w-md text-[22px] leading-snug text-primary lg:text-[42px]">
               {title}
             </h2>
 

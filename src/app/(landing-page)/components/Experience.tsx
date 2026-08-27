@@ -29,16 +29,16 @@ const ExperiencesSection = ({
   buttons,
 }: ExperiencesSectionProps) => {
   return (
-    <Section defaultPadding={false} className="bg-secondary">
+    <Section className="bg-secondary">
       {/* HEADING */}
-      <div className="mx-auto w-full max-w-6xl px-4 py-14 md:px-6 md:py-20">
+      <div className="mx-auto w-full max-w-6xl px-4 md:px-6 mb-8 md:mb-10">
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center">
           <div className="relative mb-3 h-10 aspect-[2/1]">
             <Image src={icon} alt="" fill className="object-contain" />
           </div>
           <p className="mb-2 text-[16px] uppercase text-p1">{tagline}</p>
 
-          <h2 className="text-2xl text-primary md:text-[40px]">{title}</h2>
+          <h2 className="text-[22px] leading-snug text-primary md:text-[40px]">{title}</h2>
         </div>
       </div>
 
@@ -103,7 +103,7 @@ const ExperiencesSection = ({
       </div>
 
       {/* CTA */}
-      <div className="flex justify-center gap-2 px-4 py-5 md:py-6">
+      <div className="flex justify-center gap-2 px-4 pt-6">
         {buttons.map((button, index) => (
           <LinkButton
             key={index}

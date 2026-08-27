@@ -28,8 +28,7 @@ export default function LandingPage() {
         />
       </div>
       <SectionWithContainer
-        defaultPadding={false}
-        sectionClassName="py-8 border-b border-primary lg:hidden"
+        sectionClassName="bg-primary border-b border-primary lg:hidden"
         containerClassName="space-y-4"
       >
         <Form1 />
@@ -48,17 +47,6 @@ export default function LandingPage() {
       <Review {...landingPageData.testimonialsData} />
 
       <FAQ {...landingPageData.faqData} />
-      <SectionWithContainer
-        defaultPadding={false}
-        sectionClassName="py-8 border-b border-primary lg:hidden"
-        containerClassName="space-y-4"
-      >
-        <Form1 />
-        <p
-          className="text-sm text-light max-w-3xl text-center mx-auto"
-          dangerouslySetInnerHTML={{ __html: landingPageData.hero.benefits }}
-        />
-      </SectionWithContainer>
     </main>
   );
 }
