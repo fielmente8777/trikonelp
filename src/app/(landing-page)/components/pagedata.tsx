@@ -307,14 +307,14 @@ export const landingPageData = {
 
     title: "Questions Guests Ask Us Most!",
 
-    buttons: [
+buttons: [
       {
         label: "Enquire Now",
-        link: "#",
+        link: contact.WhatsappCta,
       },
       {
         label: "Book Now",
-        link: "#",
+        link: "#form",
       },
     ],
 
@@ -357,10 +357,10 @@ export const landingPageData = {
     description:
       "Every stone and beam in this house is a hundred years old — reused, not replaced. We work with local craftsmen, source from the valley, and try to leave Nainital a little better than we found it. Nothing complicated. Just a house, and a community, worth taking care of.",
     image: "/images/Rectangle 34624289_11zon.jpg",
-    buttons: [
+   buttons: [
       {
         label: "Enquire Now",
-        link: "#form",
+        link: contact.WhatsappCta,
       },
       {
         label: "Book Now",
