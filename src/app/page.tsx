@@ -23,7 +23,7 @@ export default function LandingPage() {
       >
         <Form1 />
         <p
-          className="text-sm text-white tracking-widest text-center"
+          className="text-[16px] text-white tracking-widest text-center"
           dangerouslySetInnerHTML={{ __html: landingPageData.hero.benefits }}
         />
       </div>

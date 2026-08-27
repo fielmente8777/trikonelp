@@ -28,7 +28,7 @@ const Difference = ({
         <div className="flex flex-col justify-center text-center lg:text-left">
           <p className="mb-6 md:text-[16px] text-sm uppercase text-p1">{tagline}</p>
 
-          <h2 className="text-3xl text-primary md:text-[40px] ">
+          <h2 className="text-3xl text-primary font-round md:text-[40px] ">
             {title}
           </h2>
 
@@ -62,7 +62,7 @@ const Difference = ({
             {description}
           </p>
 
-          <p className="mt-6 font-golden text-sm text-primary md:text-lg">
+          <p className="mt-6 font-golden text-sm text-cormorant text-primary md:text-lg">
             — {note}
           </p>
         </div>

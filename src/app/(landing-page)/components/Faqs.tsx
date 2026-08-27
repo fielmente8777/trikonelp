@@ -20,12 +20,7 @@ interface FAQProps {
   }[];
 }
 
-const FAQ = ({
-  tagline,
-  title,
-  faqs,
-  buttons,
-}: FAQProps) => {
+const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -33,20 +28,16 @@ const FAQ = ({
   };
 
   return (
-    <SectionWithContainer
-      sectionClassName="bg-secondary"
-      containerId="#faqs"
-    >
+    <SectionWithContainer sectionClassName="bg-secondary" containerId="#faqs">
       <div className="mx-auto w-full max-w-7xl ">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          
           {/* LEFT CONTENT */}
           <div>
-            <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-p1 md:text-xs">
+            <p className="mb-2 text-xs uppercase text-p1 md:text-base">
               {tagline}
             </p>
 
-            <h2 className="max-w-md text-3xl leading-tight text-primary md:text-4xl lg:text-[42px]">
+            <h2 className="max-w-md text-3xl text-primary text-round md:text-[40px]">
               {title}
             </h2>
 
@@ -84,10 +75,7 @@ const FAQ = ({
               const isOpen = openIndex === index;
 
               return (
-                <div
-                  key={index}
-                  className="border-b border-p1/30"
-                >
+                <div key={index} className="border-b border-p1/30">
                   <button
                     type="button"
                     onClick={() => toggleFAQ(index)}
@@ -102,16 +90,12 @@ const FAQ = ({
                     "
                     aria-expanded={isOpen}
                   >
-                    <span className="text-base leading-6 text-primary md:text-lg">
+                    <span className="text-base text-round text-primary md:text-2xl">
                       {faq.question}
                     </span>
 
                     <span className="shrink-0 text-p1">
-                      {isOpen ? (
-                        <IoRemove size={18} />
-                      ) : (
-                        <IoAdd size={18} />
-                      )}
+                      {isOpen ? <IoRemove size={18} /> : <IoAdd size={18} />}
                     </span>
                   </button>
 
@@ -124,7 +108,7 @@ const FAQ = ({
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-5 pr-8 text-sm leading-6 text-grey">
+                      <p className="pb-5 pr-8 text-base md:text-2xl text-round text-grey">
                         {faq.answer}
                       </p>
                     </div>
@@ -133,7 +117,6 @@ const FAQ = ({
               );
             })}
           </div>
-
         </div>
       </div>
     </SectionWithContainer>

@@ -14,7 +14,7 @@ const LandingNavbar = () => {
 
   return (
     <header className="max_screen_width w-full bg-secondary">
-      <nav className="max_width flex items-center justify-between ">
+      <nav className="max_screen_width flex items-center justify-between px-6">
         {/* LOGO */}
         <div className="relative aspect-4/4 w-full max-w-25">
           <Image

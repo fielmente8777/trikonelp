@@ -57,12 +57,12 @@ const DiningSection = ({
           {/* RIGHT - CONTENT */}
           <div className="flex flex-col justify-center text-white ">
             {/* TAGLINE */}
-            <p className="mb-3 text-xs uppercase tracking-[0.22em] text-p1 md:text-sm">
+            <p className="mb-3 text-xs uppercase text-p1 md:text-[16px]">
               {tagline}
             </p>
 
             {/* TITLE */}
-            <h2 className="md:max-w-2xl text-3xl leading-[1.15] text-white sm:text-4xl md:text-[42px] lg:text-[48px]">
+            <h2 className="md:max-w-2xl text-3xl text-white text-round  md:text-[40px]">
               {title}
             </h2>
 
@@ -78,9 +78,8 @@ const DiningSection = ({
                     px-3
                     py-1.5
                     text-[10px]
-                    leading-4
                     text-white/90
-                    sm:text-xs
+                    md:text-sm
                   "
                 >
                   {feature}

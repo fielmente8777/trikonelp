@@ -47,7 +47,7 @@ const Room: React.FC<RoomsSectionProps> = ({
           <div>
             <p className="mb-2 text-xs uppercase text-p1">{tagline}</p>
 
-            <div className="max-w-3xl text-secondary">
+            <div className="max-w-3xl text-secondary text-round">
               <SectionHeading title={title} />
             </div>
           </div>

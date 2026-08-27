@@ -87,18 +87,17 @@ const Review: React.FC<ReviewProps> = ({
         >
           {/* HEADING */}
           <div className="mb-8">
-            <p className="mb-3 text-xs uppercase tracking-[0.22em] text-p1">
+            <p className="mb-3 text-xs md:text-[16px] uppercase text-p1">
               {tagline}
             </p>
 
             <h2
               className="
+              text-round
                 max-w-2xl
                 text-3xl
-                leading-[1.15]
                 text-primary
-                sm:text-4xl
-                lg:text-[40px]
+                md:text-[40px]
               "
             >
               {title}
@@ -118,7 +117,7 @@ const Review: React.FC<ReviewProps> = ({
 
             {/* DESCRIPTION */}
             {reviewDescription && (
-              <p className="mt-6 max-w-2xl text-sm leading-6 text-grey md:text-base md:leading-7">
+              <p className="mt-6 max-w-2xl text-sm text-grey md:text-[18px]">
                 {reviewDescription}
               </p>
             )}

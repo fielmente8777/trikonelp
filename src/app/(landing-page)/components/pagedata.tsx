@@ -5,7 +5,7 @@ export const landingPageData = {
 
   hero: {
     tag: "A restored heritage stay in Nainital",
-    title: "<strong> Come Home to </strong> <br/> the quiet side of the hills",
+    title: "<strong> Come Home to </strong> <br/> the <em>quiet <em/> side of the hills",
     description: "",
     benefits:
       "Save 15% when you book direct · No prepayment · Free cancellation",
@@ -32,7 +32,7 @@ export const landingPageData = {
       "Two Architects. One Childhood Home. A Hundred Years Of Stone And Timber.",
 
     description:
-      "The deodars got here first — tall, unhurried, wrapping this hundred-year-old house in their shade. It was Shahena's childhood home, lovingly restored (not rebuilt) by two architect friends who wanted to keep its old-world charm exactly as it was the same stone, the same timber, the same quiet. Step through the gate and the hills hold you first, then the house does. This is a slow vacation, made for feeling everything",
+      "The deodars got here first — tall, unhurried, wrapping this hundred-year-old house in their shade. It was Shahena's childhood home, lovingly restored (not rebuilt) by two architect friends who wanted to keep its old-world charm exactly as it was the same stone, the same timber, the same quiet. Step through the gate and the hills hold you first, then the house does. This is a slow vacation, made for feeling everything.",
 
     note: "Mansi & Shahena, Co-founders",
 

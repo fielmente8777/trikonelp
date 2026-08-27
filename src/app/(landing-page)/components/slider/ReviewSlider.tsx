@@ -12,9 +12,7 @@ const ReviewSlider: React.FC<{
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const toggleDescription = (index: number) => {
-    setExpandedIndex((current) =>
-      current === index ? null : index
-    );
+    setExpandedIndex((current) => (current === index ? null : index));
   };
 
   return (
@@ -60,8 +58,8 @@ const ReviewSlider: React.FC<{
               "
             >
               {/* QUOTE */}
-              <span className="text-2xl">
-                <CommaIcon/>
+              <span className="">
+                <CommaIcon />
               </span>
 
               {/* REVIEW */}
@@ -69,7 +67,7 @@ const ReviewSlider: React.FC<{
                 className={`
                   mt-3
                   text-sm
-                  leading-6
+                  md:text-lg
                   text-grey
                   ${isExpanded ? "" : "line-clamp-3"}
                 `}
@@ -86,6 +84,7 @@ const ReviewSlider: React.FC<{
                     mt-1
                     w-fit
                     text-xs
+
                     font-medium
                     text-primary
                     underline
@@ -99,13 +98,9 @@ const ReviewSlider: React.FC<{
               {/* BOTTOM */}
               <div className="mt-auto pt-5">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm tracking-[2px] text-p1">
-                    ★★★★★
-                  </span>
+                  <span className="text-sm tracking-[2px] text-p1">★★★★★</span>
 
-                  <span className="text-xs text-grey">
-                    {item.name}
-                  </span>
+                  <span className="text-xs text-grey">{item.name}</span>
                 </div>
               </div>
             </div>

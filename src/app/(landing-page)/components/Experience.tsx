@@ -38,7 +38,7 @@ const ExperiencesSection = ({
           </div>
           <p className="mb-2 text-[16px] uppercase text-p1">{tagline}</p>
 
-          <h2 className="text-2xl text-primary md:text-[40px]">{title}</h2>
+          <h2 className="text-2xl text-primary text-round md:text-[40px]">{title}</h2>
         </div>
       </div>
 

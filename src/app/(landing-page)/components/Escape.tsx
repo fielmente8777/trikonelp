@@ -68,7 +68,7 @@ const Escape: React.FC<EscapeProps> = ({
           </div>
 
           {description && (
-            <p className="mt-2 text-sm text-primary md:text-[40px] capitalize">
+            <p className="mt-2 text-sm text-primary md:text-[40px] text-round capitalize">
               {description}
             </p>
           )}
@@ -159,11 +159,11 @@ const Escape: React.FC<EscapeProps> = ({
 
               {/* STATIC CONTENT */}
               <div className="flex flex-col md:aspect-[8/5] md:h-[200px] justify-center bg-primary px-6 py-8">
-                <p className="mb-3 text-[9px] uppercase text-p1">
+                <p className="mb-3 text-[8px] md:text-[10px] uppercase text-p1">
                   {middleBottom.tagline}
                 </p>
 
-                <h3 className="text-2xl leading-[1.15] text-white md:text-[25px]">
+                <h3 className="text-2xl text-round text-white md:text-[32px]">
                   {middleBottom.title}
                 </h3>
               </div>
