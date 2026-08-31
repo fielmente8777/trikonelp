@@ -5,6 +5,7 @@ import {
   BuffeteIcon,
   CapIcon,
   CarIcon,
+  CourtIcon,
   EveningIcon,
   VegIcon,
   WIcon,
@@ -32,7 +33,7 @@ export const landingPageData = {
   step: [
     {
       title: "Opposite Nainital High Court",
-      icon: <CarIcon />,
+      icon: <CourtIcon />,
     },
     {
       title: "Ample On-Site Parking",

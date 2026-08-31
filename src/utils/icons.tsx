@@ -859,4 +859,58 @@ export const VegIcon = () => (
       strokeLinejoin="round"
     />
   </svg>
-)
+);
+
+export const CourtIcon = () => (
+  <svg
+  width={20}
+  height={20}
+  viewBox="0 0 20 20"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M8.33325 15V9.16667"
+    stroke="#C99E54"
+    strokeWidth="1.16667"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M9.26675 1.83167C9.49541 1.72059 9.74645 1.6633 10.0007 1.66416C10.2549 1.66503 10.5055 1.72404 10.7334 1.83667L17.2884 5.0425C17.6851 5.23667 17.5468 5.83334 17.1051 5.83334H2.89509C2.45342 5.83334 2.31592 5.23667 2.71175 5.0425L9.26675 1.83167Z"
+    stroke="#C99E54"
+    strokeWidth="1.16667"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M11.6667 15V9.16667"
+    stroke="#C99E54"
+    strokeWidth="1.16667"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M15 15V9.16667"
+    stroke="#C99E54"
+    strokeWidth="1.16667"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M2.5 18.3333H17.5"
+    stroke="#C99E54"
+    strokeWidth="1.16667"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+  <path
+    d="M5 15V9.16667"
+    stroke="#C99E54"
+    strokeWidth="1.16667"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  />
+</svg>
+
+);

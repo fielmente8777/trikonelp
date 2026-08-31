@@ -3,7 +3,6 @@
 import Image from "next/image";
 import LinkButton from "../buttons/LinkButton";
 import { usePathname } from "next/navigation";
-import { BookingCalenderIcon, CalendarIcon } from "@/src/utils/formIcons";
 
 const LandingNavbar = () => {
   const pathName = usePathname();
@@ -28,11 +27,9 @@ const LandingNavbar = () => {
 
         {/* BOOK STAY */}
         <LinkButton
-          href="/"
+          href="#form"
           label="Book Now"
           calendarIcon
-          target="_blank"
-          rel="noopener noreferrer"
           className="
             w-fit
             rounded-lg
@@ -43,7 +40,6 @@ const LandingNavbar = () => {
             border-primary
           "
         />
-
       </nav>
     </header>
   );
