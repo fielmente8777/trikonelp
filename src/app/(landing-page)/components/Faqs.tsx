@@ -8,6 +8,7 @@ import { IoAdd, IoRemove } from "react-icons/io5";
 interface FAQItem {
   question: string;
   answer: string;
+  listOptions?:string[];
 }
 
 interface FAQProps {
@@ -110,6 +111,9 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                       <p className="pb-5 pr-8 text-base text-round text-grey">
                         {faq.answer}
                       </p>
+                      {listOptions &&  (<ul>
+                        {faq.listOptions.map((item,i) => <li key={i}>{item}</li>
+                      </ul>)}
                     </div>
                   </div>
                 </div>
