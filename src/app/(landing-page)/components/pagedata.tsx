@@ -85,7 +85,16 @@ export const landingPageData = {
         category: "The Bungalow",
         title: "Five Colonial Suites",
 
-        images: ["/images/room/room1.jpg", "/images/room/room2.jpg","/images/room/room3.jpg","/images/room/room4.jpg","/images/room/room5.jpg","/images/room/room6.jpg","/images/room/room7.jpg","/images/room/room8.jpg"],
+        images: [
+          "/images/room/room1.jpg",
+          "/images/room/room2.jpg",
+          "/images/room/room3.jpg",
+          "/images/room/room4.jpg",
+          "/images/room/room5.jpg",
+          "/images/room/room6.jpg",
+          "/images/room/room7.jpg",
+          "/images/room/room8.jpg",
+        ],
 
         description: "For those who want history under their feet.",
 
@@ -125,7 +134,14 @@ export const landingPageData = {
         category: "The Cottage",
         title: "Eight Dreamy Rooms",
 
-        images: ["/images/room/room10.jpg", "/images/room/room11.jpg","/images/room/room12.jpg","/images/room/room13.jpg","/images/room/room14.jpg","/images/room/room15.jpg"],
+        images: [
+          "/images/room/room10.jpg",
+          "/images/room/room11.jpg",
+          "/images/room/room12.jpg",
+          "/images/room/room13.jpg",
+          "/images/room/room14.jpg",
+          "/images/room/room15.jpg",
+        ],
 
         description: "For those who want the forest at their doorstep.",
 
@@ -240,7 +256,7 @@ export const landingPageData = {
         image: "/images/img7.jpg",
         alt: "Dining at Trikone",
       },
-            {
+      {
         image: "/images/new/img5.jpg",
         alt: "Home style dining",
       },
@@ -248,7 +264,7 @@ export const landingPageData = {
         image: "/images/new/img6.jpg",
         alt: "Dining at Trikone",
       },
-            {
+      {
         image: "/images/new/img7.jpg",
         alt: "Home style dining",
       },
@@ -308,7 +324,7 @@ export const landingPageData = {
 
     title: "Questions Guests Ask Us Most!",
 
-buttons: [
+    buttons: [
       {
         label: "Enquire Now",
         link: contact.WhatsappCta,
@@ -321,34 +337,60 @@ buttons: [
 
     faqs: [
       {
-        question: "Where Exactly Is Deodar Bungalow & Cottage?",
+        question: "Where exactly is Deodar Bungalow & Cottages?",
         answer:
-          "Located directly opposite the Nainital High Court, next to the erstwhile Manu Maharani Hotel (now Namah Nainital).",
+          "Deodar Bungalow & Cottages is located in Sukhatal, Nainital, nestled within the tranquil Kumaon region of Uttarakhand. Our heritage property is in the heart of the town surrounded by deodar trees. Conveniently situated just 1.5 km from Mall Road, 2.2 km from Nainital Lake and in close proximity to the Nainital high court, our property is close enough to explore the best of Nainital's charm, yet far enough to escape into your own mountain sanctuary.",
       },
       {
         question: "Is Parking Available?",
         answer:
-          "Yes. We offer ample on-site parking, making your drive to Nainital easy and hassle-free.",
+          "Yes, absolutely. We provide complimentary on-site parking for all our guests throughout their stay. If you're planning to drive or arrive on your own vehicle, we have ample parking space available for you.",
       },
       {
-        question: "What Are The Room Options?",
+        question: "What are the room rates?",
         answer:
-          "Choose from thoughtfully designed Deluxe Cottage Rooms and British-Inspired Suites, each offering a comfortable and memorable stay.",
+          "Room rates vary by room category, season, and travel dates. Cottages are priced between ₹4,500–₹7,500, while Bungalows range from ₹6,500–₹12,000. For current rates and availability, please contact us with your travel dates and number of travellers.",
       },
       {
-        question: "Can We Book The Whole Property?",
+        question: "Can we book the whole property?",
         answer:
-          "Yes. With 13 rooms across two buildings, Deodar Bungalow & Cottage is well suited for private groups, retreats, corporate offsites and extended stays.",
+          "Yes, the entire property can be booked for groups. The property has two independent units—a Bungalow with 5 heritage rooms and a Cottage with 8 cosy rooms. You can book either unit or both, depending on your requirements. Each unit has its own living, dining, and outdoor spaces, making them ideal for family gatherings, group retreats, and intimate celebrations. For bookings and customized options, please get in touch with us directly..",
       },
       {
         question: "What About Food?",
         answer:
-          "Our home-style kitchen serves breakfast and meals, prepared with the warmth and comfort of home cooking rather than restaurant-style catering.",
+          "We have a home kitchen where our meals are prepared using locally sourced, seasonal ingredients, with a focus on the flavours of Kumaoni cuisine. We keep the food fresh, simple, and thoughtfully prepared to complement your stay. If you have any dietary preferences or requirements, please let us know in advance. We’ll be happy to plan the menu accordingly.",
       },
       {
         question: "How Do I Confirm A Booking?",
+        answer: "Booking with us is simple:",
+        listOptions: [
+          "Get in touch with us via WhatsApp, email, or phone to check availability.",
+          "Share your preferred dates and room requirements.",
+          "Confirm your reservation and complete the booking details.",
+          "We’ll take care of the rest and look forward to welcoming you to our property.",
+        ],
+      },
+      {
+        question: "What are the check-in and check-out times?",
         answer:
-          "Get in touch with our team to check availability, room options and rates, and we’ll guide you through the booking confirmation process.",
+          "Standard check-in is at 2:00 PM and check-out is at 11:00 AM. Early check-in and late check-out may be available based on room availability. If you need to arrange an earlier arrival or later departure, please contact us in advance, and we'll do our best to accommodate your needs.",
+      },
+      {
+        question:
+          "How do I reach the property from Nainital town/nearest airport/railway Station?",
+        answer:
+          "Deodar is just 1.5 km from Nainital town centre, making it easily accessible by car, taxi, or auto-rickshaw —approximately a 5-10 minute drive. The nearest airport is Pantnagar Airport (approximately 70 km away), and the closest railway station is Kathgodam Railway Station (approximately 38 km away). We recommend hiring a taxi or pre-arranging transportation from either point.",
+      },
+      {
+        question: "Is the property pet-friendly?",
+        answer:
+          "Yes, we do welcome pets at Deodar. We have 2 resident pets in our property, and we're happy to accommodate your furry friends as well. For detailed information about our pet policy, including guidelines and requirements, please reach out to us.",
+      },
+      {
+        question: "Is Deodar Suitable For Remote Work/Staycations?",
+        answer:
+          "Absolutely. We have WiFi connectivity and our rooms are equipped with a work desk and chair, quiet spaces for focused work, and thoughtfully designed common areas. Many guests extend their stays while maintaining work routines.",
       },
     ],
   },
@@ -358,7 +400,7 @@ buttons: [
     description:
       "Every stone and beam in this house is a hundred years old — reused, not replaced. We work with local craftsmen, source from the valley, and try to leave Nainital a little better than we found it. Nothing complicated. Just a house, and a community, worth taking care of.",
     image: "/images/Rectangle 34624289_11zon.jpg",
-   buttons: [
+    buttons: [
       {
         label: "Enquire Now",
         link: contact.WhatsappCta,
@@ -374,11 +416,23 @@ buttons: [
     description: "What your stay actually looks like ",
 
     images: {
-      left: ["/images/gallery/gal1.jpg", "/images/gallery/gal2.jpg", "/images/gallery/gal3.jpg"],
+      left: [
+        "/images/gallery/gal1.jpg",
+        "/images/gallery/gal2.jpg",
+        "/images/gallery/gal3.jpg",
+      ],
 
-      middleTop: ["/images/gallery/gal4.jpg", "/images/gallery/gal5.jpg", "/images/gallery/gal6.jpg"],
+      middleTop: [
+        "/images/gallery/gal4.jpg",
+        "/images/gallery/gal5.jpg",
+        "/images/gallery/gal6.jpg",
+      ],
 
-      right: ["/images/gallery/gal7.jpg", "/images/gallery/gal8.jpg", "/images/gallery/gal9.jpg"],
+      right: [
+        "/images/gallery/gal7.jpg",
+        "/images/gallery/gal8.jpg",
+        "/images/gallery/gal9.jpg",
+      ],
     },
 
     middleBottom: {
