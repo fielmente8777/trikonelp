@@ -8,7 +8,7 @@ import { IoAdd, IoRemove } from "react-icons/io5";
 interface FAQItem {
   question: string;
   answer: string;
-  listOptions?:string[];
+  listOptions?: string[];
 }
 
 interface FAQProps {
@@ -100,6 +100,7 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                   </button>
 
                   {/* ANSWER */}
+
                   <div
                     className={`grid transition-all duration-300 ease-in-out ${
                       isOpen
@@ -108,27 +109,31 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-5 pr-8 text-base text-round text-grey">
+                      <p className="pb-3 pr-8 text-base text-round text-grey">
                         {faq.answer}
                       </p>
-                      {listOptions &&  (<ul>
-                        {faq.listOptions.map((item,i) => <li key={i}>{item}</li>
-                      </ul>)}
+                      {faq.listOptions && faq.listOptions.length > 0 && (
+                        <ol className="list-decimal space-y-2 pb-5 pl-6 pr-8 text-base text-round text-grey">
+                          {faq.listOptions.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ol>
+                      )}
                     </div>
                   </div>
                 </div>
               );
             })}
           </div>
-           <div className="mt-8 md:hidden grid grid-cols-1 lg:max-w-[350px] gap-2">
-              {buttons.map((button, index) => (
-                <LinkButton
-                  key={index}
-                  href={button.link}
-                  label={button.label}
-                  whatsAppIcon={index === 0}
-                  calendarIcon={index === 1}
-                  className={`
+          <div className="mt-8 md:hidden grid grid-cols-1 lg:max-w-[350px] gap-2">
+            {buttons.map((button, index) => (
+              <LinkButton
+                key={index}
+                href={button.link}
+                label={button.label}
+                whatsAppIcon={index === 0}
+                calendarIcon={index === 1}
+                className={`
                     uppercase
                     w-full
                     justify-center
@@ -141,9 +146,9 @@ const FAQ = ({ tagline, title, faqs, buttons }: FAQProps) => {
                         : "border border-primary bg-primary text-white"
                     }
                   `}
-                />
-              ))}
-            </div>
+              />
+            ))}
+          </div>
         </div>
       </div>
     </SectionWithContainer>
