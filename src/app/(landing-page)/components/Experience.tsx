@@ -77,7 +77,7 @@ const ExperiencesSection = ({
 
               {/* TITLE */}
               <div className="absolute bottom-0 left-0 w-full bg-black/40 px-2 py-2 text-center">
-                <p className="text-xs text-white md:text-base">{card.title}</p>
+                <p className="text-sm text-white md:text-base">{card.title}</p>
               </div>
             </div>
           )}

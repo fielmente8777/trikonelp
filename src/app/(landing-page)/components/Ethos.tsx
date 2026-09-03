@@ -61,7 +61,7 @@ const Ethos = ({
               "
             >
               {/* TAGLINE */}
-              <p className="mb-4 md:text-[16px] uppercase text-white text-xs">
+              <p className="mb-4 md:text-[16px] uppercase text-white text-sm">
                 {tagline}
               </p>
 
@@ -72,7 +72,7 @@ const Ethos = ({
               />
 
               {/* DESCRIPTION */}
-              <p className="mx-auto mt-5 text-xs md:text-lg text-white/90">
+              <p className="mx-auto mt-5 text-sm md:text-lg text-white/90">
                 {description}
               </p>
 

@@ -70,7 +70,7 @@ const DiningSection = ({
         {/* RIGHT - CONTENT */}
         <div className="flex flex-col justify-center text-white ">
           {/* TAGLINE */}
-          <p className="mb-3 max-md:text-xs uppercase text-p1 ">
+          <p className="mb-3 text-sm md:text-xs uppercase text-p1 ">
             {tagline}
           </p>
 
@@ -94,7 +94,7 @@ const DiningSection = ({
                 <p
                   className="
                     text-white/90
-                    text-sm
+                    md:text-sm
                   "
                 >
                   {feature.title}
@@ -132,7 +132,7 @@ const DiningSection = ({
           </div>
 
           {/* DESCRIPTION */}
-          <p className="mt-7 md:max-w-[620px] text-sm text-white/80 md:text-lg">
+          <p className="mt-7 md:max-w-[620px] text-[15px] text-white/80 md:text-lg">
             {description}
           </p>
 

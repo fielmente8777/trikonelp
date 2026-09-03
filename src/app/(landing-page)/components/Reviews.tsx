@@ -49,12 +49,12 @@ const Review: React.FC<ReviewProps> = ({
             className="
               relative
               w-full
-              max-w-[280px]
+              max-w-[700px]
               overflow-hidden
               rounded-xl
               border-2
               border-white
-              sm:max-w-[300px]
+              md:max-w-[300px]
               lg:max-w-[365px]
             "
           >

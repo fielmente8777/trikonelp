@@ -87,7 +87,7 @@ const LandingFooter = () => {
                   className="
                     max-w-sm
                     whitespace-pre-line
-                    text-sm
+                    text-base
                     leading-6
                     text-white/90
                     md:text-base
@@ -121,7 +121,7 @@ const LandingFooter = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="
-                      text-white/90
+                      text-white/90 text-base
                     "
                     >
                       {item.label}
@@ -133,7 +133,7 @@ const LandingFooter = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className="
-                        text-white/90
+                        text-white/90 text-base
                       "
                       >
                         {item.label2}

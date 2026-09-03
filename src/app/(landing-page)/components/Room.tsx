@@ -45,7 +45,7 @@ const Room: React.FC<RoomsSectionProps> = ({
         <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_0.9fr]">
           {/* LEFT CONTENT */}
           <div>
-            <p className="mb-2 text-xs uppercase text-p1">{tagline}</p>
+            <p className="mb-2 text-sm md:text-xs uppercase text-p1">{tagline}</p>
 
             <div className="max-w-3xl text-secondary text-round">
               <SectionHeading title={title} />
@@ -56,7 +56,7 @@ const Room: React.FC<RoomsSectionProps> = ({
           {description && (
             <div className="flex flex-col justify-end text-secondary text-left mt-4 md:mt-6">
               <p
-                className="max-w-md text-sm sm:text-base md:text-[18px] md:ml-auto"
+                className="max-w-md text-base md:text-[18px] md:ml-auto"
                 dangerouslySetInnerHTML={{ __html: description }}
               />
             </div>
@@ -139,17 +139,17 @@ export const RoomsCard: React.FC<
       {/* CONTENT */}
       <div className="flex flex-1 flex-col p-4 md:p-5">
         {/* CATEGORY */}
-        <p className="mb-4 text-xs uppercase text-p1 md:text-[16px]">
+        <p className="mb-4 text-sm uppercase text-p1 md:text-[16px]">
           {category}
         </p>
 
         {/* TITLE */}
-        <h3 className="text-xl text-dark md:text-3xl">
+        <h3 className="text-[24px] text-dark md:text-3xl">
           {title}
         </h3>
 
         {/* DESCRIPTION */}
-        <p className="mt-2 text-xs text-black md:text-lg">
+        <p className="mt-2 text-sm text-black md:text-lg">
           {description}
         </p>
 
@@ -172,7 +172,7 @@ export const RoomsCard: React.FC<
           {amenities?.map((amenity, index) => (
             <li
               key={index}
-              className="flex items-start gap-2 text-xs text-grey md:text-lg"
+              className="flex items-start gap-2 text-[15px] text-grey md:text-lg"
             >
               <span className="mt-[2px] ">
                 <SquareIcon/>

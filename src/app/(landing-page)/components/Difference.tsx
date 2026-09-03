@@ -26,7 +26,7 @@ const Difference = ({
       <div className="grid w-full grid-cols-1 items-center gap-6 md:gap-16 lg:grid-cols-2">
         {/* LEFT CONTENT */}
         <div className="flex flex-col justify-center text-center lg:text-left">
-          <p className="mb-4 lg:mb-6 md:text-[16px] text-sm uppercase text-p1">
+          <p className="mb-4 lg:mb-6 md:text-[16px] text-[15px] uppercase text-p1">
             {tagline}
           </p>
 
@@ -62,11 +62,11 @@ const Difference = ({
 
         {/* RIGHT CONTENT */}
         <div className="flex flex-col justify-center text-center lg:text-left">
-          <p className="text-sm text-grey sm:text-base md:text-[22px] leading-relaxed">
+          <p className="text-[17px] text-grey md:text-[22px]">
             {description}
           </p>
 
-          <p className="mt-6 font-golden text-sm font-cormorant text-primary md:text-lg">
+          <p className="mt-6 font-golden text-[15px] font-cormorant text-primary md:text-lg">
             — {note}
           </p>
 

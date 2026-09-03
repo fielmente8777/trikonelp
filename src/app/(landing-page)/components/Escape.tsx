@@ -59,12 +59,12 @@ const Escape: React.FC<EscapeProps> = ({
       <div className="w-full">
         {/* HEADING */}
         <div className="mx-auto mb-8 max-w-3xl text-center md:mb-10">
-          <div className="text-p1 text-xs md:text-[16px] uppercase">
+          <div className="text-p1 text-sm md:text-[16px] uppercase">
             {title}
           </div>
 
           {description && (
-            <p className="mt-2 text-sm text-primary md:text-[40px] text-round capitalize">
+            <p className="mt-2 text-xl text-primary md:text-[40px] text-round capitalize">
               {description}
             </p>
           )}
@@ -154,7 +154,7 @@ const Escape: React.FC<EscapeProps> = ({
 
               {/* STATIC CONTENT */}
               <div className="flex flex-col h-full w-full justify-center bg-primary p-5 md:p-6">
-                <p className="mb-3 text-[9px] uppercase text-p1">
+                <p className="mb-3 text-lg uppercase text-p1">
                   {middleBottom.tagline}
                 </p>
 
@@ -286,7 +286,7 @@ const Escape: React.FC<EscapeProps> = ({
 
           {/* MOBILE CONTENT */}
           <div className="flex min-h-[220px] w-full flex-col justify-center bg-primary p-5">
-            <p className="mb-3 text-[9px] uppercase text-p1">
+            <p className="mb-3 text-lg uppercase text-p1">
               {middleBottom.tagline}
             </p>
 

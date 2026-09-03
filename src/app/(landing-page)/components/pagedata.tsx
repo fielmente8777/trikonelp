@@ -78,7 +78,7 @@ export const landingPageData = {
     tagline: "ONE HOME, TWO WAYS TO STAY",
     title: "The Deodar Bungalow <br/> & Cottage",
     description:
-      "Opposite Nainital High Court, next to the forest. Close <br/> enough to explore, quiet enough to exhale.",
+      "Opposite Nainital High Court, next to the forest. Close enough to explore, quiet enough to exhale.",
 
     cards: [
       {
@@ -392,6 +392,7 @@ export const landingPageData = {
         answer:
           "Absolutely. We have WiFi connectivity and our rooms are equipped with a work desk and chair, quiet spaces for focused work, and thoughtfully designed common areas. Many guests extend their stays while maintaining work routines.",
       },
+
     ],
   },
   ethosData: {
