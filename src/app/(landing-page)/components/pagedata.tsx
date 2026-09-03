@@ -292,7 +292,7 @@ export const landingPageData = {
 
     awardImage: "/images/img9.jpg",
     awardAlt: "MakeMyTrip India's Favourite Homestays Award",
-    awardLogo: "/images/makemytrip.png",
+    awardLogo: "/images/trip.png",
     reviewDescription:
       "Awarded at the MakeMyTrip India's Favourite Homestays Awards, judged on what guests actually experienced.",
 
