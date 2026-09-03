@@ -70,7 +70,7 @@ const DiningSection = ({
         {/* RIGHT - CONTENT */}
         <div className="flex flex-col justify-center text-white ">
           {/* TAGLINE */}
-          <p className="mb-3 text-sm md:text-xs uppercase text-p1 ">
+          <p className="mb-3 text-[15px] md:text-xs uppercase text-p1 ">
             {tagline}
           </p>
 
@@ -137,7 +137,7 @@ const DiningSection = ({
           </p>
 
           {/* BUTTONS */}
-          <div className="mt-7 grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-2">
+          <div className="mt-7 grid grid-cols-1 md:grid-cols-2 max-w-[400px] gap-3 md:gap-2">
             {buttons.map((button, index) => (
               <LinkButton
                 key={index}

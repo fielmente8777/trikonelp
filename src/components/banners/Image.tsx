@@ -62,6 +62,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
                 <div
                   className="
                                 relative
+                                mb-4
                                 md:h-[120px]
                                 md:aspect-[4/3]
                                 h-[75px]
@@ -100,7 +101,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
       <div className="absolute bottom-6 right-5 md:bottom-6 md:right-8 z-30 flex gap-2">
         <button
           type="button"
-          className="image-banner-prev flex items-center justify-center md:w-10 md:h-10 rounded-full text-primary hover:bg-primary w-4 h-5 hover:text-white transition-colors active:scale-95"
+          className="image-banner-prev flex items-center justify-center md:w-10 md:h-10 rounded-full text-primary hover:bg-primary w-5 h-5 hover:text-white transition-colors active:scale-95"
           aria-label="Previous slide"
         >
           <BtnPrevIcon />

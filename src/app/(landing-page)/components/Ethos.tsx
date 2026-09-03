@@ -77,7 +77,7 @@ const Ethos = ({
               </p>
 
               {/* BUTTONS */}
-              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-2">
+              <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-2">
                 {buttons.map((button, index) => (
                   <LinkButton
                     key={index}

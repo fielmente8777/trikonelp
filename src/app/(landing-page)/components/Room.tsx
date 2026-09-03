@@ -183,7 +183,7 @@ export const RoomsCard: React.FC<
         </ul>
 
         {/* BUTTONS */}
-        <div className="mt-auto max-md:flex-col flex gap-2 pt-4">
+        <div className="mt-auto max-md:flex-col flex gap-3  md:gap-2 pt-4">
           {buttons?.map((button, index) => (
             <LinkButton
               key={index}
