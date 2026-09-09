@@ -64,17 +64,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           name="google-site-verification"
           content="0qrxNkwwCN-jdfL-gzpf3NlWYKXuhXSjQBz3k-rYrYA"
         />
-
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-XN3JXL5RMZ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-3EGNKWTFKQ"
         ></script>
         <Script id="google analytics" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-XN3JXL5RMZ');`}
+  gtag('config', 'G-3EGNKWTFKQ');`}
         </Script>
       </head>
       <body
