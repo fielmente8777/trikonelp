@@ -18,8 +18,8 @@ export const contact = {
   },
   callCta: `tel:+917668119130`,
   WhatsappCta: `https://wa.me/+917668119130?text=${enCodeText}`,
-  // formDomain: "hotelanantharaa10825728",
-  formDomain: "testmulti", //for testing
+  formDomain: "deodarbungalow&cottages,nainital",
+  // formDomain: "testmulti", //for testing
   formHid: "",
   // formHid: "",
 };
