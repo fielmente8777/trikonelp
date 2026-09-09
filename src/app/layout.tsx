@@ -65,13 +65,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           content="0qrxNkwwCN-jdfL-gzpf3NlWYKXuhXSjQBz3k-rYrYA"
         />
 
-        <Script
-          id="google analytics"
-          strategy="afterInteractive"
+        <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-XN3JXL5RMZ"
-        ></Script>
-        <Script>
+        ></script>
+        <Script id="google analytics" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
