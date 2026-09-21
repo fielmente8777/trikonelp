@@ -299,23 +299,23 @@ export const landingPageData = {
     reviews: [
       {
         review:
-          "The most peaceful two nights we've had in Nainital. Parking on site alone made the trip worth it.",
-        name: "Delhi NCR",
+          "Great location, nice food, clean room and Linen. The staff was very cooperative and humble. Heritage property, it was an amazing stay. Recommended for travellers.",
+        name: "Varun S.",
       },
       {
         review:
-          "The most peaceful two nights we've had in Nainital. Parking on site alone made the trip worth it.",
-        name: "Delhi NCR",
+          "Absolutely outstanding stay! The staff made us feel like family from the moment we arrived. The room was spotless, stylish, and incredibly comfortable. Breakfast was amazing A true gem—we cannot wait to return!",
+        name: "Raj D.",
       },
       {
         review:
-          "The most peaceful two nights we've had in Nainital. Parking on site alone made the trip worth it.",
-        name: "Delhi NCR",
+          "Very good location very polite staff breakfast very delicious",
+        name: "Rahul D.",
       },
       {
         review:
-          "The most peaceful two nights we've had in Nainital. Parking on site alone made the trip worth it.",
-        name: "Delhi NCR",
+          "The property is very beautiful and well maintained. Location is also good as it is just 10 mins walk from the Mall Road. The breakfast served by them was also good, food was tasty, but they have limited provision for lunch and dinner. Staffs were courteous and generous. Thanks.",
+        name: "Chirantan C.",
       },
     ],
   },
