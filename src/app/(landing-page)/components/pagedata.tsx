@@ -199,6 +199,8 @@ export const landingPageData = {
         image: "/images/new/img4.jpg",
         title: "Art & Craft",
       },
+
+      
       // {
       //   image: "/images/img2.jpg",
       //   title: "Bird Watching & Nature Retreat",
