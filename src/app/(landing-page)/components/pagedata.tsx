@@ -137,7 +137,7 @@ export const landingPageData = {
         images: [
           "/images/room/room10.jpg",
           "/images/room/room11.jpg",
-          "/images/room/room12.jpg",
+          "/images/room/room12.jpeg",
           "/images/room/room13.jpg",
           "/images/room/room14.jpg",
           "/images/room/room15.jpg",

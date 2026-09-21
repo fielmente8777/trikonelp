@@ -55,8 +55,10 @@ const LandingFooter = () => {
             <div
               className="
                 relative
-                h-[170px]
-                w-[190px]
+                h-[100px]
+                w-[130px]
+                md:h-[170px]
+                md:w-[190px]
                 overflow-hidden
                 rounded-lg
                 bg-secondary

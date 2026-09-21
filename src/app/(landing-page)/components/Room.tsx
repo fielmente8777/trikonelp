@@ -6,7 +6,7 @@ import SwiperCarousel from "@/src/components/sliders/SwiperCarousel";
 import { SectionHeading } from "@/src/components/typography";
 import { BtnNextIcon, BtnPrevIcon, SquareIcon } from "@/src/utils/icons";
 import Image from "next/image";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 
 interface RoomsSectionProps {
   tagline: string;
@@ -45,7 +45,9 @@ const Room: React.FC<RoomsSectionProps> = ({
         <div className="mb-8 grid grid-cols-1 gap-6 md:grid-cols-[1.1fr_0.9fr]">
           {/* LEFT CONTENT */}
           <div>
-            <p className="mb-2 text-sm md:text-xs uppercase text-p1">{tagline}</p>
+            <p className="mb-2 text-sm md:text-xs uppercase text-p1">
+              {tagline}
+            </p>
 
             <div className="max-w-3xl text-secondary text-round">
               <SectionHeading title={title} />
@@ -96,10 +98,14 @@ export const RoomsCard: React.FC<
           data={images}
           slidesPerView={1}
           spaceBetween={0}
-          modules={[Navigation]}
+          modules={[Navigation, Autoplay]}
           navigation={{
             nextEl: `.rooms-next-${index}`,
             prevEl: `.rooms-prev-${index}`,
+          }}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
           }}
           loop={true}
           speed={600}
@@ -144,14 +150,10 @@ export const RoomsCard: React.FC<
         </p>
 
         {/* TITLE */}
-        <h3 className="text-[24px] text-dark md:text-3xl">
-          {title}
-        </h3>
+        <h3 className="text-[24px] text-dark md:text-3xl">{title}</h3>
 
         {/* DESCRIPTION */}
-        <p className="mt-2 text-sm text-black md:text-lg">
-          {description}
-        </p>
+        <p className="mt-2 text-sm text-black md:text-lg">{description}</p>
 
         {/* TAGS */}
         {tags && tags.length > 0 && (
@@ -175,8 +177,8 @@ export const RoomsCard: React.FC<
               className="flex items-start gap-2 text-[15px] text-grey md:text-lg"
             >
               <span className="mt-[2px] ">
-                <SquareIcon/>
-                </span>
+                <SquareIcon />
+              </span>
               <span>{amenity.label}</span>
             </li>
           ))}

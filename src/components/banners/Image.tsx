@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Container, Section } from "../sectionComponants";
-import { Navigation } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 import SwiperCarousel from "../sliders/SwiperCarousel";
 import { BtnNextIcon, BtnPrevIcon } from "@/src/utils/icons";
 import { footerData } from "../footer/footerdata";
@@ -28,10 +28,14 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
         data={hero.images}
         slidesPerView={1}
         spaceBetween={0}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         navigation={{
           nextEl: ".image-banner-next",
           prevEl: ".image-banner-prev",
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
         }}
         loop={true}
         speed={800}
@@ -98,7 +102,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
       </div>
 
       {/* ================= NAVIGATION ================= */}
-      <div className="absolute bottom-6 right-5 md:bottom-6 md:right-8 z-30 flex gap-2">
+      <div className="absolute bottom-6 right-5 md:bottom-6 md:right-8 z-30 hidden md:flex gap-2">
         <button
           type="button"
           className="image-banner-prev flex items-center justify-center md:w-10 md:h-10 rounded-full text-primary hover:bg-primary w-5 h-5 hover:text-white transition-colors active:scale-95"
