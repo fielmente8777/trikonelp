@@ -64,23 +64,31 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           name="google-site-verification"
           content="0qrxNkwwCN-jdfL-gzpf3NlWYKXuhXSjQBz3k-rYrYA"
         />
-        
-       
-        <Script id="google analytics" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3EGNKWTFKQ');`}
-        </Script>
-         <Script
-          id="google-tag-manager"
+        <Script
           strategy="afterInteractive"
-        >{`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-K4C7HLSZ');`}</Script>
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-3EGNKWTFKQ"
+        ></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-3EGNKWTFKQ');`}
+        </Script>
+
+        <Script
+          strategy="afterInteractive"
+          id="google-tag-manager"
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-K4C7HLSZ');`,
+          }}
+        />
       </head>
       <body
         className={`${dmSans.variable} ${fraunces.variable} ${varelaRound.variable} ${cormorant.variable} h-full antialiased`}
@@ -94,14 +102,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        {/* <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TML5XPBV"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript> */}
+
         <WebProvider>
           <OfferSection />
           <LandingNavbar />
@@ -116,11 +117,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
       <Script id="chatbot-config" strategy="afterInteractive">
         {`
-    window.eazbotConfig = {
-       ndid: "3b6fb698-ab43-4bdc-a1a9-eac76af9d3be",
-       hid: "62036194",
-    };
-  `}
+            window.eazbotConfig = {
+              ndid: "3b6fb698-ab43-4bdc-a1a9-eac76af9d3be",
+              hid: "62036194",
+            };
+          `}
       </Script>
       <Script
         src="https://cb-script.dyq28lyxrazm2.amplifyapp.com/widget/lead-chatbot.js"

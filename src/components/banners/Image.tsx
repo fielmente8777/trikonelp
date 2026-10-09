@@ -64,17 +64,7 @@ const ImageB: React.FC<ImageBannerProps> = ({ hero }) => {
             <div className="grid lg:grid-cols-[1.2fr_1fr] grid-cols-1">
               <div className="space-y-2 w-full text-left">
                 <div
-                  className="
-                                relative
-                                mb-4
-                                md:h-[120px]
-                                md:aspect-[4/3]
-                                h-[75px]
-                                aspect-[4/3.5]
-                                overflow-hidden
-                                rounded-lg
-                                bg-secondary
-                              "
+                  className="relative mb-4  md:h-[120px]  md:aspect-[4/3]  h-[75px]  aspect-[4/3.5]  overflow-hidden  rounded-lg  bg-secondary"
                 >
                   <Image
                     src={footerData.logo}
